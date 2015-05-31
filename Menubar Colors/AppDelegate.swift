@@ -13,9 +13,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     @IBOutlet weak var window: NSWindow!
     @IBOutlet weak var colorsMenu: NSMenu!
+    
+    let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(-1)
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
-        // Insert code here to initialize your application
+        let icon = NSImage(named: "statusIcon")
+        icon!.setTemplate(true)
+//        icon.
+        
+        statusItem.image = icon
+        statusItem.menu = colorsMenu
+        
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
