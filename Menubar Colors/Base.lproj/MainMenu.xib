@@ -18,7 +18,7 @@
                 <menuItem title="Colors" id="TKa-xI-QXc">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
-                        <action selector="colorsClicked:" target="Voe-Tx-rLC" id="HU5-Bz-lcX"/>
+                        <action selector="colorsMenuItemSelected:" target="Voe-Tx-rLC" id="y0R-Sv-ceG"/>
                     </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="mDV-Wo-W7d"/>

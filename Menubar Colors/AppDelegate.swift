@@ -21,10 +21,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationWillTerminate(aNotification: NSNotification) {
         // Insert code here to tear down your application
     }
-
-    @IBAction func colorsClicked(sender: NSMenuItem) {
+    
+    @IBAction func colorsMenuItemSelected(sender: NSMenuItem) {
         
     }
+    
 
 }
 
