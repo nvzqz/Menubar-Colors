@@ -11,8 +11,8 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    @IBOutlet weak var window: NSWindow!
-    @IBOutlet weak var colorsMenu: NSMenu!
+    
+    @IBOutlet weak var statusMenu: NSMenu!
     
     let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(-1)
 
@@ -22,7 +22,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 //        icon.
         
         statusItem.image = icon
-        statusItem.menu = colorsMenu
+        statusItem.menu = statusMenu
         
     }
 
