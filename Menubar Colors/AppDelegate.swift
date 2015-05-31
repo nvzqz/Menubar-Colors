@@ -10,7 +10,6 @@ import Cocoa
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-
     
     @IBOutlet weak var statusMenu: NSMenu!
     
@@ -19,7 +18,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         let icon = NSImage(named: "statusIcon")
         icon!.setTemplate(true)
-//        icon.
         
         statusItem.image = icon
         statusItem.menu = statusMenu
@@ -31,7 +29,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     @IBAction func colorsMenuItemSelected(sender: NSMenuItem) {
-        
+        // Open the color picker
     }
     
 

@@ -30,11 +30,18 @@
                 <menuItem title="Open at Login" id="psO-8J-O4Q">
                     <modifierMask key="keyEquivalentModifierMask"/>
                 </menuItem>
-                <menuItem title="About" id="K1l-u5-8kP">
+                <menuItem title="About" id="caU-DE-D65">
                     <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="orderFrontStandardAboutPanel:" target="-1" id="AgL-A5-YNt"/>
+                    </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="bOD-iZ-Rcz"/>
-                <menuItem title="Quit" keyEquivalent="q" id="C4f-PR-TqC"/>
+                <menuItem title="Quit" keyEquivalent="q" id="wTq-55-VWB">
+                    <connections>
+                        <action selector="terminate:" target="-1" id="NkM-cm-NOt"/>
+                    </connections>
+                </menuItem>
             </items>
             <point key="canvasLocation" x="436.5" y="310.5"/>
         </menu>
