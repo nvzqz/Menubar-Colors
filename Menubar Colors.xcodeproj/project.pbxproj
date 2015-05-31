@@ -396,6 +396,7 @@
 				243061101B1A93C500E63FBB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		243061111B1A93C500E63FBB /* Build configuration list for PBXNativeTarget "Menubar ColorsTests" */ = {
 			isa = XCConfigurationList;
@@ -404,6 +405,7 @@
 				243061131B1A93C500E63FBB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
