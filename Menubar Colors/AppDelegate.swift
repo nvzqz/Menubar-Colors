@@ -26,13 +26,13 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         let icon = NSImage(named: "statusIcon")
         icon!.setTemplate(true)
         statusItem!.image = icon
-        
-        colorPanel?.worksWhenModal = true
     }
     
     override func awakeFromNib() {
+        colorPanel = NSColorPanel()
+        colorPanel?.hidesOnDeactivate = false
+        
         //Set status bar item to default size
-        println(startTime)
         let statusBar = NSStatusBar.systemStatusBar()
         statusItem = statusBar.statusItemWithLength(-1)
         
@@ -43,7 +43,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         
         statusMenu.delegate = self
         
-        colorPanel = NSColorPanel()
         colorsMenuItem.title = "Open Colors"
         
     }
