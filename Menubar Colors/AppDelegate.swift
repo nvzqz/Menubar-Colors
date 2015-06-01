@@ -64,12 +64,20 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     func adjustColorPanel() {
         println("adjustColorPanel() called at \(NSDate())")
         if (colorPanel?.visible)! == false {
-            println("Opening color panel")
-            colorPanel?.makeKeyAndOrderFront(self)
+            openColorPanel()
         } else {
-            println("Closing color panel")
-            colorPanel?.orderOut(self)
+            closeColorPanel()
         }
+    }
+    
+    func openColorPanel() {
+        println("Opening color panel")
+        colorPanel?.makeKeyAndOrderFront(self)
+    }
+    
+    func closeColorPanel() {
+        println("Closing color panel")
+        colorPanel?.orderOut(self)
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
