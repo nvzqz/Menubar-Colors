@@ -48,14 +48,16 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         statusButton?.sendActionOn(Int((NSEventMask.LeftMouseUpMask | NSEventMask.RightMouseUpMask).rawValue))
         
         statusMenu.delegate = self
-        
-        colorsMenuItem.title = "Show Colors"
-        
     }
     
     func statusButtonPressed(sender: NSStatusBarButton!) {
         var event: NSEvent! = NSApp.currentEvent!
         if (event.type == NSEventType.RightMouseUp) {
+            if (colorPanel?.visible)! == false {
+                colorsMenuItem.title = "Show Colors"
+            } else {
+                colorsMenuItem.title = "Hide Colors"
+            }
             statusItem?.menu = statusMenu
             statusItem?.popUpStatusItemMenu(statusMenu)
         } else {
@@ -80,13 +82,11 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     func openColorPanel() {
         NSLog("Opening color panel")
         colorPanel?.makeKeyAndOrderFront(self)
-        colorsMenuItem.title = "Hide Colors"
     }
     
     func closeColorPanel() {
         NSLog("Closing color panel")
         colorPanel?.orderOut(self)
-        colorsMenuItem.title = "Show Colors"
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
