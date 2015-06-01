@@ -49,7 +49,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         
         statusMenu.delegate = self
         
-        colorsMenuItem.title = "Open Colors"
+        colorsMenuItem.title = "Show Colors"
         
     }
     
