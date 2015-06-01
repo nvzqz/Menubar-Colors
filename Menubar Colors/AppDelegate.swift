@@ -85,7 +85,9 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
 
     func applicationWillTerminate(aNotification: NSNotification) {
         // Insert code here to tear down your application
-        println("Terminating...")
+        let endTime = NSDate()
+        let executionTime = endTime.timeIntervalSinceDate(startTime)
+        NSLog("executionTime = %f", executionTime)
     }
     
     @IBAction func colorsMenuItemSelected(sender: NSMenuItem) {
