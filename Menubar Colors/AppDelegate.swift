@@ -12,11 +12,11 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     
     @IBOutlet weak var statusMenu: NSMenu!
+    @IBOutlet weak var colorsMenuItem: NSMenuItem!
     
     let startTime = NSDate()
     
     var colorPanel: NSColorPanel?
-    var colorPanelOpen: Bool = false
     
     var statusItem: NSStatusItem?
     var statusButton: NSStatusBarButton?
@@ -44,6 +44,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         statusMenu.delegate = self
         
         colorPanel = NSColorPanel()
+        colorsMenuItem.title = "Open Colors"
+        
     }
     
     func statusButtonPressed(sender: NSStatusBarButton!) {
@@ -73,11 +75,13 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     func openColorPanel() {
         println("Opening color panel")
         colorPanel?.makeKeyAndOrderFront(self)
+        colorsMenuItem.title = "Close Colors"
     }
     
     func closeColorPanel() {
         println("Closing color panel")
         colorPanel?.orderOut(self)
+        colorsMenuItem.title = "Open Colors"
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
