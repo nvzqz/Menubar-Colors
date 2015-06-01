@@ -75,13 +75,13 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     func openColorPanel() {
         println("Opening color panel")
         colorPanel?.makeKeyAndOrderFront(self)
-        colorsMenuItem.title = "Close Colors"
+        colorsMenuItem.title = "Hide Colors"
     }
     
     func closeColorPanel() {
         println("Closing color panel")
         colorPanel?.orderOut(self)
-        colorsMenuItem.title = "Open Colors"
+        colorsMenuItem.title = "Show Colors"
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
