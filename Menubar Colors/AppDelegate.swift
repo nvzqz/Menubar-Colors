@@ -15,6 +15,12 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     @IBOutlet weak var colorsMenuItem: NSMenuItem!
     
     let startTime = NSDate()
+    var executionTime: NSTimeInterval {
+        get {
+            let endTime = NSDate()
+            return endTime.timeIntervalSinceDate(startTime)
+        }
+    }
     
     var colorPanel: NSColorPanel?
     
@@ -63,7 +69,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     }
     
     func adjustColorPanel() {
-        println("adjustColorPanel() called at \(NSDate())")
+        NSLog("adjustColorPanel() called")
         if (colorPanel?.visible)! == false {
             openColorPanel()
         } else {
@@ -72,22 +78,20 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     }
     
     func openColorPanel() {
-        println("Opening color panel")
+        NSLog("Opening color panel")
         colorPanel?.makeKeyAndOrderFront(self)
         colorsMenuItem.title = "Hide Colors"
     }
     
     func closeColorPanel() {
-        println("Closing color panel")
+        NSLog("Closing color panel")
         colorPanel?.orderOut(self)
         colorsMenuItem.title = "Show Colors"
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
         // Insert code here to tear down your application
-        let endTime = NSDate()
-        let executionTime = endTime.timeIntervalSinceDate(startTime)
-        NSLog("executionTime = %f", executionTime)
+        NSLog("Terminating...\nExecution time = %f seconds", executionTime)
     }
     
     @IBAction func colorsMenuItemSelected(sender: NSMenuItem) {
