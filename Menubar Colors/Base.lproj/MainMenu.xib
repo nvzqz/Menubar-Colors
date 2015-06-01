@@ -13,7 +13,6 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Menubar_Colors" customModuleProvider="target">
             <connections>
-                <outlet property="colorsMenuItem" destination="TKa-xI-QXc" id="dYq-m4-kcU"/>
                 <outlet property="statusMenu" destination="Gqi-Lp-YJq" id="sYq-H3-6ix"/>
             </connections>
         </customObject>
@@ -43,7 +42,7 @@
                     </connections>
                 </menuItem>
             </items>
-            <point key="canvasLocation" x="436.5" y="310.5"/>
+            <point key="canvasLocation" x="240.5" y="165.5"/>
         </menu>
     </objects>
 </document>

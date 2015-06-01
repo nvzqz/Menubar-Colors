@@ -13,7 +13,9 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     
     @IBOutlet weak var statusMenu: NSMenu!
     
-    let colorPanel = NSColorPanel()
+    let startTime = NSDate()
+    let colorPanel           = NSColorPanel()
+    var colorPanelOpen: Bool = false
     
     var statusItem: NSStatusItem?
     var statusButton: NSStatusBarButton?
@@ -28,10 +30,11 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     
     override func awakeFromNib() {
         //Set status bar item to default size
+        println(startTime)
         let statusBar = NSStatusBar.systemStatusBar()
         statusItem = statusBar.statusItemWithLength(-1)
         
-        statusButton = statusItem!.button!
+        statusButton         = statusItem!.button!
         statusButton?.target = self
         statusButton?.action = "statusButtonPressed:"
         statusButton?.sendActionOn(Int((NSEventMask.LeftMouseUpMask | NSEventMask.RightMouseUpMask).rawValue))
@@ -45,7 +48,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
             statusItem?.menu = statusMenu
             statusItem?.popUpStatusItemMenu(statusMenu)
         } else {
-            openColorPicker()
+            openColorPanel()
         }
     }
     
@@ -54,16 +57,17 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         statusItem?.menu = nil
     }
     
-    func openColorPicker() {
-        
+    func openColorPanel() {
+        println("openColorPanel() called at \(NSDate())")
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
         // Insert code here to tear down your application
+        println("Terminating...")
     }
     
     @IBAction func colorsMenuItemSelected(sender: NSMenuItem) {
-        openColorPicker()
+        openColorPanel()
     }
     
 

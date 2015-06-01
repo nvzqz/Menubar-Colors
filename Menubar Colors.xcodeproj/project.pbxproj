@@ -73,10 +73,7 @@
 		243060F61B1A93C500E63FBB /* Menubar Colors */ = {
 			isa = PBXGroup;
 			children = (
-				243060F91B1A93C500E63FBB /* AppDelegate.swift */,
-				243060FB1B1A93C500E63FBB /* Images.xcassets */,
-				243060FD1B1A93C500E63FBB /* MainMenu.xib */,
-				243060F71B1A93C500E63FBB /* Supporting Files */,
+				24A691AC1B1BD4E100E63FBB /* Application */,
 			);
 			path = "Menubar Colors";
 			sourceTree = "<group>";
@@ -104,6 +101,17 @@
 				243061091B1A93C500E63FBB /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		24A691AC1B1BD4E100E63FBB /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				243060FB1B1A93C500E63FBB /* Images.xcassets */,
+				243060FD1B1A93C500E63FBB /* MainMenu.xib */,
+				243060F71B1A93C500E63FBB /* Supporting Files */,
+				243060F91B1A93C500E63FBB /* AppDelegate.swift */,
+			);
+			name = Application;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
