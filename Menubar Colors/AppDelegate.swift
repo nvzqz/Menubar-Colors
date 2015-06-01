@@ -14,7 +14,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     @IBOutlet weak var statusMenu: NSMenu!
     
     let startTime = NSDate()
-    let colorPanel           = NSColorPanel()
+    
+    var colorPanel: NSColorPanel?
     var colorPanelOpen: Bool = false
     
     var statusItem: NSStatusItem?
@@ -26,6 +27,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         icon!.setTemplate(true)
         statusItem!.image = icon
         
+        colorPanel?.worksWhenModal = true
     }
     
     override func awakeFromNib() {
@@ -40,6 +42,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         statusButton?.sendActionOn(Int((NSEventMask.LeftMouseUpMask | NSEventMask.RightMouseUpMask).rawValue))
         
         statusMenu.delegate = self
+        
+        colorPanel = NSColorPanel()
     }
     
     func statusButtonPressed(sender: NSStatusBarButton!) {
@@ -48,7 +52,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
             statusItem?.menu = statusMenu
             statusItem?.popUpStatusItemMenu(statusMenu)
         } else {
-            openColorPanel()
+            adjustColorPanel()
         }
     }
     
@@ -57,8 +61,15 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         statusItem?.menu = nil
     }
     
-    func openColorPanel() {
-        println("openColorPanel() called at \(NSDate())")
+    func adjustColorPanel() {
+        println("adjustColorPanel() called at \(NSDate())")
+        if (colorPanel?.visible)! == false {
+            println("Opening color panel")
+            colorPanel?.makeKeyAndOrderFront(self)
+        } else {
+            println("Closing color panel")
+            colorPanel?.orderOut(self)
+        }
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
@@ -67,7 +78,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     }
     
     @IBAction func colorsMenuItemSelected(sender: NSMenuItem) {
-        openColorPanel()
+        adjustColorPanel()
     }
     
 
