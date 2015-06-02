@@ -22,7 +22,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         }
     }
     
-    var colorPanel: NSColorPanel?
+    var colorPanel: MenubarColorPanel?
     
     var statusItem: NSStatusItem?
     var statusButton: NSStatusBarButton?
@@ -35,7 +35,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     }
     
     override func awakeFromNib() {
-        colorPanel = NSColorPanel()
+        colorPanel = MenubarColorPanel()
         colorPanel?.hidesOnDeactivate = false
         
         //Set status bar item to default size
