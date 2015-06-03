@@ -35,6 +35,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     }
     
     override func awakeFromNib() {
+        //Instantiate colorPanel and prevent it from hiding when app is not in focus
         colorPanel = MenubarColorPanel()
         colorPanel?.hidesOnDeactivate = false
         
@@ -42,12 +43,28 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         let statusBar = NSStatusBar.systemStatusBar()
         statusItem = statusBar.statusItemWithLength(-1)
         
+        //Set status button and action
         statusButton         = statusItem!.button!
         statusButton?.target = self
         statusButton?.action = "statusButtonPressed:"
         statusButton?.sendActionOn(Int((NSEventMask.LeftMouseUpMask | NSEventMask.RightMouseUpMask).rawValue))
         
         statusMenu.delegate = self
+        
+        //Get the status button location and set colorPanel starting location
+        if let button = statusButton {
+            let windowRect = button.convertRect(button.bounds, toView: nil)
+            let screenRect = button.window?.convertRectToScreen(windowRect)
+            NSLog("statusButton rect: \(NSStringFromRect(screenRect!))")
+            
+            let newLocation: NSPoint = NSMakePoint(
+                screenRect!.origin.x - (screenRect!.width + colorPanel!.frame.width) / CGFloat(2),
+                screenRect!.origin.y - screenRect!.height * CGFloat(2)
+            )
+            
+            colorPanel?.setFrameTopLeftPoint(newLocation)
+            
+        }
     }
     
     func statusButtonPressed(sender: NSStatusBarButton!) {
