@@ -13,6 +13,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, NSMenuDele
     
     @IBOutlet weak var statusMenu: NSMenu!
     @IBOutlet weak var colorsMenuItem: NSMenuItem!
+    @IBOutlet weak var resetPositionMenuItem: NSMenuItem!
     
     let startTime = NSDate()
     var executionTime: NSTimeInterval {
@@ -65,32 +66,13 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, NSMenuDele
             statusItem?.menu = statusMenu
             statusItem?.popUpStatusItemMenu(statusMenu)
         } else {
-            adjustColorPanel()
+            colorPanel?.toggleVisibility()
         }
     }
     
     //Disable left click menu upon close
     func menuDidClose(menu: NSMenu) {
         statusItem?.menu = nil
-    }
-    
-    func adjustColorPanel() {
-        NSLog("adjustColorPanel() called")
-        if  colorPanel!.visible == false {
-            openColorPanel()
-        } else {
-            closeColorPanel()
-        }
-    }
-    
-    func openColorPanel() {
-        NSLog("Opening color panel")
-        colorPanel?.makeKeyAndOrderFront(self)
-    }
-    
-    func closeColorPanel() {
-        NSLog("Closing color panel")
-        colorPanel?.orderOut(self)
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
@@ -99,9 +81,18 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, NSMenuDele
     }
     
     @IBAction func colorsMenuItemSelected(sender: NSMenuItem) {
-        adjustColorPanel()
+        colorPanel?.toggleVisibility()
     }
     
+    @IBAction func resetPositionMenuItemSelected(sender: NSMenuItem) {
+        if sender.state == NSOffState {
+            sender.state = NSOnState
+            colorPanel?.resetPositionUponOpen = true
+        } else {
+            sender.state = NSOffState
+            colorPanel?.resetPositionUponOpen = false
+        }
+    }
 
 }
 

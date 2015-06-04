@@ -14,6 +14,7 @@
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Menubar_Colors" customModuleProvider="target">
             <connections>
                 <outlet property="colorsMenuItem" destination="TKa-xI-QXc" id="Z1N-e2-fSM"/>
+                <outlet property="resetPositionMenuItem" destination="NM5-3u-nFi" id="44m-Gq-urE"/>
                 <outlet property="statusMenu" destination="Gqi-Lp-YJq" id="sYq-H3-6ix"/>
             </connections>
         </customObject>
@@ -26,6 +27,13 @@
                         <action selector="colorsMenuItemSelected:" target="Voe-Tx-rLC" id="y0R-Sv-ceG"/>
                     </connections>
                 </menuItem>
+                <menuItem isSeparatorItem="YES" id="mPq-XU-uh8"/>
+                <menuItem title="Reset Position" id="NM5-3u-nFi">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="resetPositionMenuItemSelected:" target="Voe-Tx-rLC" id="8Ij-eY-LWC"/>
+                    </connections>
+                </menuItem>
                 <menuItem isSeparatorItem="YES" id="mDV-Wo-W7d"/>
                 <menuItem title="Quit" keyEquivalent="q" id="wTq-55-VWB">
                     <connections>
@@ -33,7 +41,7 @@
                     </connections>
                 </menuItem>
             </items>
-            <point key="canvasLocation" x="240.5" y="165.5"/>
+            <point key="canvasLocation" x="346.5" y="251.5"/>
         </menu>
     </objects>
 </document>
