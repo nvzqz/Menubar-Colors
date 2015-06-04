@@ -9,7 +9,7 @@
 import Cocoa
 
 @NSApplicationMain
-class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
+class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, NSMenuDelegate {
     
     @IBOutlet weak var statusMenu: NSMenu!
     @IBOutlet weak var colorsMenuItem: NSMenuItem!
@@ -35,9 +35,11 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     }
     
     override func awakeFromNib() {
-        //Instantiate colorPanel and prevent it from hiding when app is not in focus
+        //Instantiate colorPanel and adjust
         colorPanel = MenubarColorPanel()
+        colorPanel?.delegate          = self
         colorPanel?.hidesOnDeactivate = false
+        colorPanel?.moveToScreenTopRight()
         
         //Set status bar item to default size
         let statusBar = NSStatusBar.systemStatusBar()
@@ -50,27 +52,12 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         statusButton?.sendActionOn(Int((NSEventMask.LeftMouseUpMask | NSEventMask.RightMouseUpMask).rawValue))
         
         statusMenu.delegate = self
-        
-        //Get the status button location and set colorPanel starting location
-        if let button = statusButton {
-            let windowRect = button.convertRect(button.bounds, toView: nil)
-            let screenRect = button.window?.convertRectToScreen(windowRect)
-            NSLog("statusButton rect: \(NSStringFromRect(screenRect!))")
-            
-            let newLocation: NSPoint = NSMakePoint(
-                screenRect!.origin.x - (screenRect!.width + colorPanel!.frame.width) / CGFloat(2),
-                screenRect!.origin.y - screenRect!.height * CGFloat(2)
-            )
-            
-            colorPanel?.setFrameTopLeftPoint(newLocation)
-            
-        }
     }
     
     func statusButtonPressed(sender: NSStatusBarButton!) {
         var event: NSEvent! = NSApp.currentEvent!
         if (event.type == NSEventType.RightMouseUp) {
-            if (colorPanel?.visible)! == false {
+            if  colorPanel!.visible == false {
                 colorsMenuItem.title = "Show Colors"
             } else {
                 colorsMenuItem.title = "Hide Colors"
@@ -89,7 +76,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     
     func adjustColorPanel() {
         NSLog("adjustColorPanel() called")
-        if (colorPanel?.visible)! == false {
+        if  colorPanel!.visible == false {
             openColorPanel()
         } else {
             closeColorPanel()
