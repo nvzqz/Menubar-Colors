@@ -44,7 +44,7 @@ class MenubarColorPanel: NSColorPanel {
     
     func moveToScreenTopRight() {
         
-        var framePadding: CGFloat = screenSize.width / 160
+        var framePadding: CGFloat = screenSize.width / 160 * self.backingScaleFactor
         
         let newLocation: NSPoint = NSMakePoint(
             screenBounds.maxX - frame.width - framePadding,
