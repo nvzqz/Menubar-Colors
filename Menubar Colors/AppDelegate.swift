@@ -54,7 +54,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, NSMenuDele
         aboutAppIconImageView.image        = NSApp.applicationIconImage
         aboutAppNameLabel.stringValue      = (NSBundle.mainBundle().infoDictionary!["CFBundleName"]) as! String
         aboutVersionLabel.stringValue      = "Version " + (NSBundle.mainBundle().infoDictionary!["CFBundleVersion"] as! String)
-        let projectLinkText                = "Github Project Page"
+        let projectLinkText                = "GitHub Project Page"
         aboutProjectLinkButton.title       = projectLinkText
         aboutProjectLinkButton.stringValue = projectLinkText
         aboutCopyrightLabel.stringValue    = (NSBundle.mainBundle().infoDictionary!["NSHumanReadableCopyright"]) as! String
