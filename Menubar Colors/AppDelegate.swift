@@ -15,6 +15,13 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, NSMenuDele
     @IBOutlet weak var colorsMenuItem: NSMenuItem!
     @IBOutlet weak var resetPositionMenuItem: NSMenuItem!
     
+    @IBOutlet weak var aboutWindow: AboutWindow!
+    @IBOutlet weak var aboutAppIconImageView: NSImageView!
+    @IBOutlet weak var aboutAppNameLabel: NSTextField!
+    @IBOutlet weak var aboutVersionLabel: NSTextField!
+    @IBOutlet weak var aboutProjectLinkButton: NSButton!
+    @IBOutlet weak var aboutCopyrightLabel: NSTextField!
+    
     let startTime = NSDate()
     var executionTime: NSTimeInterval {
         get {
@@ -42,6 +49,21 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, NSMenuDele
         colorPanel?.hidesOnDeactivate = false
         colorPanel?.moveToScreenTopRight()
         
+        //Set up the about window
+        aboutWindow.delegate               = self
+        aboutAppIconImageView.image        = NSApp.applicationIconImage
+        aboutAppNameLabel.stringValue      = (NSBundle.mainBundle().infoDictionary!["CFBundleName"]) as! String
+        aboutVersionLabel.stringValue      = "Version " + (NSBundle.mainBundle().infoDictionary!["CFBundleVersion"] as! String)
+        let projectLinkText                = "Github Project Page"
+        aboutProjectLinkButton.title       = projectLinkText
+        aboutProjectLinkButton.stringValue = projectLinkText
+        aboutCopyrightLabel.stringValue    = (NSBundle.mainBundle().infoDictionary!["NSHumanReadableCopyright"]) as! String
+
+//        aboutWindowVersionLabel.stringValue = "Version " + (NSBundle.mainBundle().infoDictionary!["CFBundleVersion"] as! String)
+//        aboutWindowCopyrightLabel.stringValue = (NSBundle.mainBundle().infoDictionary!["NSHumanReadableCopyright"]) as! String
+//        aboutWindowCopyrightLabel.sizeToFit()
+        
+        
         //Set status bar item to default size
         let statusBar = NSStatusBar.systemStatusBar()
         statusItem = statusBar.statusItemWithLength(-1)
@@ -52,7 +74,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, NSMenuDele
         statusButton?.action = "statusButtonPressed:"
         statusButton?.sendActionOn(Int((NSEventMask.LeftMouseUpMask | NSEventMask.RightMouseUpMask).rawValue))
         
-        statusMenu.delegate = self
+        statusMenu.delegate  = self
     }
     
     func statusButtonPressed(sender: NSStatusBarButton!) {
@@ -92,6 +114,14 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, NSMenuDele
             sender.state = NSOffState
             colorPanel?.resetPositionUponOpen = false
         }
+    }
+    
+    @IBAction func aboutMenuItemSelected(sender: NSMenuItem) {
+        aboutWindow.open()
+    }
+    
+    @IBAction func projectLinkButtonPushed(sender: NSButton) {
+        NSWorkspace.sharedWorkspace().openURL(NSURL(string: "https://github.com/nvzqz/Menubar-Colors")!)
     }
 
 }

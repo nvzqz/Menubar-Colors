@@ -13,6 +13,13 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Menubar_Colors" customModuleProvider="target">
             <connections>
+                <outlet property="AboutWindow" destination="v1v-eE-DCY" id="sjY-4J-mLg"/>
+                <outlet property="aboutAppIconImageView" destination="1UH-nD-juY" id="TZc-mZ-HAf"/>
+                <outlet property="aboutAppNameLabel" destination="M9D-lR-e4w" id="rNX-Ta-7Ek"/>
+                <outlet property="aboutCopyrightLabel" destination="lxL-iq-zSP" id="gtk-aG-guX"/>
+                <outlet property="aboutProjectLinkButton" destination="pc6-id-zKy" id="lCq-WO-X58"/>
+                <outlet property="aboutVersionLabel" destination="8Cg-wn-oeJ" id="R7i-Z0-lCW"/>
+                <outlet property="aboutWindow" destination="LeK-ig-lpa" id="JWu-Ci-mFN"/>
                 <outlet property="colorsMenuItem" destination="TKa-xI-QXc" id="Z1N-e2-fSM"/>
                 <outlet property="resetPositionMenuItem" destination="NM5-3u-nFi" id="44m-Gq-urE"/>
                 <outlet property="statusMenu" destination="Gqi-Lp-YJq" id="sYq-H3-6ix"/>
@@ -35,6 +42,12 @@
                     </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="mDV-Wo-W7d"/>
+                <menuItem title="About" id="EYm-DN-hfo">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="aboutMenuItemSelected:" target="Voe-Tx-rLC" id="1n5-uC-qTx"/>
+                    </connections>
+                </menuItem>
                 <menuItem title="Quit" keyEquivalent="q" id="wTq-55-VWB">
                     <connections>
                         <action selector="terminate:" target="-1" id="NkM-cm-NOt"/>
@@ -43,5 +56,74 @@
             </items>
             <point key="canvasLocation" x="346.5" y="251.5"/>
         </menu>
+        <window title="Menubar Colors" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="documentWindow" id="LeK-ig-lpa" customClass="AboutWindow" customModule="Menubar_Colors" customModuleProvider="target">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="283" y="305" width="280" height="240"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
+            <view key="contentView" autoresizesSubviews="NO" id="v1v-eE-DCY">
+                <rect key="frame" x="0.0" y="0.0" width="280" height="240"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1UH-nD-juY" userLabel="App Icon Image View">
+                        <rect key="frame" x="92" y="136" width="96" height="96"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="96" id="4JB-KX-ue8"/>
+                            <constraint firstAttribute="height" constant="96" id="Ma4-Xa-Utf"/>
+                        </constraints>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="MS0-A5-CPn"/>
+                    </imageView>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="M9D-lR-e4w" userLabel="App Name Label">
+                        <rect key="frame" x="95" y="109" width="91" height="19"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" alignment="center" placeholderString="App Name" id="Kyb-BD-MjU">
+                            <font key="font" metaFont="systemBold" size="16"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8Cg-wn-oeJ" userLabel="Version Label">
+                        <rect key="frame" x="113" y="84" width="54" height="17"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" alignment="center" placeholderString="Version" id="zXf-ns-4kU">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pc6-id-zKy">
+                        <rect key="frame" x="99" y="45" width="82" height="19"/>
+                        <buttonCell key="cell" type="roundRect" title="Project Link" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Cpm-41-1eZ">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="cellTitle"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="projectLinkButtonPushed:" target="Voe-Tx-rLC" id="F7f-Cc-WBU"/>
+                        </connections>
+                    </button>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lxL-iq-zSP" userLabel="Copyright Label">
+                        <rect key="frame" x="14" y="12" width="252" height="14"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" alignment="center" placeholderString="Copyright" id="ddF-cx-feV">
+                            <font key="font" metaFont="smallSystem"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="centerX" secondItem="8Cg-wn-oeJ" secondAttribute="centerX" id="MhH-or-g65"/>
+                    <constraint firstAttribute="trailing" secondItem="lxL-iq-zSP" secondAttribute="trailing" constant="16" id="RcE-QH-JCR"/>
+                    <constraint firstItem="M9D-lR-e4w" firstAttribute="top" secondItem="1UH-nD-juY" secondAttribute="bottom" constant="8" id="SoV-AF-0RA"/>
+                    <constraint firstAttribute="bottom" secondItem="lxL-iq-zSP" secondAttribute="bottom" constant="12" id="U8O-kN-U65"/>
+                    <constraint firstItem="lxL-iq-zSP" firstAttribute="top" secondItem="pc6-id-zKy" secondAttribute="bottom" constant="20" id="UyK-LQ-Ayg"/>
+                    <constraint firstItem="8Cg-wn-oeJ" firstAttribute="top" secondItem="M9D-lR-e4w" secondAttribute="bottom" constant="8" id="Wbz-4n-VDO"/>
+                    <constraint firstAttribute="centerX" secondItem="M9D-lR-e4w" secondAttribute="centerX" id="bFZ-Dg-Z9M"/>
+                    <constraint firstItem="pc6-id-zKy" firstAttribute="top" secondItem="8Cg-wn-oeJ" secondAttribute="bottom" constant="20" id="odb-il-erJ"/>
+                    <constraint firstItem="1UH-nD-juY" firstAttribute="top" secondItem="v1v-eE-DCY" secondAttribute="top" constant="8" id="swd-ra-eZw"/>
+                    <constraint firstItem="lxL-iq-zSP" firstAttribute="leading" secondItem="v1v-eE-DCY" secondAttribute="leading" constant="16" id="v5d-GW-AEL"/>
+                    <constraint firstAttribute="centerX" secondItem="pc6-id-zKy" secondAttribute="centerX" id="vgS-DZ-moJ"/>
+                    <constraint firstAttribute="centerX" secondItem="1UH-nD-juY" secondAttribute="centerX" id="yfd-3X-uSX"/>
+                </constraints>
+            </view>
+            <point key="canvasLocation" x="167" y="410"/>
+        </window>
     </objects>
 </document>
