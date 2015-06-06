@@ -50,19 +50,17 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, NSMenuDele
         colorPanel?.moveToScreenTopRight()
         
         //Set up the about window
-        aboutWindow.delegate               = self
-        aboutAppIconImageView.image        = NSApp.applicationIconImage
-        aboutAppNameLabel.stringValue      = (NSBundle.mainBundle().infoDictionary!["CFBundleName"]) as! String
-        aboutVersionLabel.stringValue      = "Version " + (NSBundle.mainBundle().infoDictionary!["CFBundleVersion"] as! String)
-        let projectLinkText                = "GitHub Project Page"
-        aboutProjectLinkButton.title       = projectLinkText
-        aboutProjectLinkButton.stringValue = projectLinkText
-        aboutCopyrightLabel.stringValue    = (NSBundle.mainBundle().infoDictionary!["NSHumanReadableCopyright"]) as! String
-
-//        aboutWindowVersionLabel.stringValue = "Version " + (NSBundle.mainBundle().infoDictionary!["CFBundleVersion"] as! String)
-//        aboutWindowCopyrightLabel.stringValue = (NSBundle.mainBundle().infoDictionary!["NSHumanReadableCopyright"]) as! String
-//        aboutWindowCopyrightLabel.sizeToFit()
-        
+        aboutWindow.delegate                   = self
+        aboutWindow.titlebarAppearsTransparent = true
+        aboutWindow.movableByWindowBackground  = true
+        aboutWindow.backgroundColor            = NSColor(red:1, green:1, blue:1, alpha:1)
+        aboutAppIconImageView.image            = NSApp.applicationIconImage
+        aboutAppNameLabel.stringValue          = (NSBundle.mainBundle().infoDictionary!["CFBundleName"]) as! String
+        aboutVersionLabel.stringValue          = "Version " + (NSBundle.mainBundle().infoDictionary!["CFBundleVersion"] as! String)
+        let projectLinkText                    = "GitHub Project Page"
+        aboutProjectLinkButton.title           = projectLinkText
+        aboutProjectLinkButton.stringValue     = projectLinkText
+        aboutCopyrightLabel.stringValue        = (NSBundle.mainBundle().infoDictionary!["NSHumanReadableCopyright"]) as! String
         
         //Set status bar item to default size
         let statusBar = NSStatusBar.systemStatusBar()
