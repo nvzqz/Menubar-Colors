@@ -115,7 +115,9 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, NSMenuDele
     }
     
     @IBAction func aboutMenuItemSelected(sender: NSMenuItem) {
-        aboutWindow.open()
+        if !aboutWindow.visible {
+            aboutWindow.open()
+        }
     }
     
     @IBAction func projectLinkButtonPushed(sender: NSButton) {
