@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		240513081B1E4F0000E63FBB /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240513071B1E4F0000E63FBB /* Regex.swift */; };
-		2405130B1B1E4FC900E63FBB /* KeyUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240513091B1E4FC900E63FBB /* KeyUtility.swift */; };
 		2405130C1B1E4FC900E63FBB /* MenubarColorPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2405130A1B1E4FC900E63FBB /* MenubarColorPanel.swift */; };
 		243060FA1B1A93C500E63FBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243060F91B1A93C500E63FBB /* AppDelegate.swift */; };
 		243060FC1B1A93C500E63FBB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 243060FB1B1A93C500E63FBB /* Images.xcassets */; };
 		243060FF1B1A93C500E63FBB /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 243060FD1B1A93C500E63FBB /* MainMenu.xib */; };
 		2430610B1B1A93C500E63FBB /* Menubar_ColorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2430610A1B1A93C500E63FBB /* Menubar_ColorsTests.swift */; };
+		247210451B221E6A00E63FBB /* AboutWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247210441B221E6A00E63FBB /* AboutWindow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +28,6 @@
 
 /* Begin PBXFileReference section */
 		240513071B1E4F0000E63FBB /* Regex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
-		240513091B1E4FC900E63FBB /* KeyUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyUtility.swift; sourceTree = "<group>"; };
 		2405130A1B1E4FC900E63FBB /* MenubarColorPanel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenubarColorPanel.swift; sourceTree = "<group>"; };
 		243060F41B1A93C500E63FBB /* Menubar Colors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Menubar Colors.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		243060F81B1A93C500E63FBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -38,6 +37,7 @@
 		243061041B1A93C500E63FBB /* Menubar ColorsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Menubar ColorsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		243061091B1A93C500E63FBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2430610A1B1A93C500E63FBB /* Menubar_ColorsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menubar_ColorsTests.swift; sourceTree = "<group>"; };
+		247210441B221E6A00E63FBB /* AboutWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutWindow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +117,7 @@
 				243060F71B1A93C500E63FBB /* Supporting Files */,
 				243060F91B1A93C500E63FBB /* AppDelegate.swift */,
 				240513071B1E4F0000E63FBB /* Regex.swift */,
-				240513091B1E4FC900E63FBB /* KeyUtility.swift */,
+				247210441B221E6A00E63FBB /* AboutWindow.swift */,
 				2405130A1B1E4FC900E63FBB /* MenubarColorPanel.swift */,
 			);
 			name = Application;
@@ -223,9 +223,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				243060FA1B1A93C500E63FBB /* AppDelegate.swift in Sources */,
-				2405130B1B1E4FC900E63FBB /* KeyUtility.swift in Sources */,
 				240513081B1E4F0000E63FBB /* Regex.swift in Sources */,
 				2405130C1B1E4FC900E63FBB /* MenubarColorPanel.swift in Sources */,
+				247210451B221E6A00E63FBB /* AboutWindow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

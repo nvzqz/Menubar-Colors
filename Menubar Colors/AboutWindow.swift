@@ -1,22 +1,18 @@
 //
-//  MenubarColorPanel.swift
+//  AboutWindow.swift
 //  Menubar Colors
 //
-//  Created by Nikolai Vazquez on 6/2/15.
+//  Created by Nikolai Vazquez on 6/5/15.
 //  Copyright (c) 2015 Nikolai Vazquez. All rights reserved.
 //
 
 import Cocoa
 
-class MenubarColorPanel: NSColorPanel {
+class AboutWindow: NSWindow {
     
     private let capslockKey     = NSEventModifierFlags.AlphaShiftKeyMask.rawValue
     private let commandKey      = NSEventModifierFlags.CommandKeyMask.rawValue
     private let commandShiftKey = NSEventModifierFlags.CommandKeyMask.rawValue | NSEventModifierFlags.ShiftKeyMask.rawValue
-    
-    private let screenBounds: NSRect = NSScreen.mainScreen()!.visibleFrame
-    private let screenSize:   NSRect = NSScreen.mainScreen()!.frame
-    var resetPositionUponOpen: Bool = false
     
     override func performKeyEquivalent(event: NSEvent) -> Bool {
         if event.type == NSEventType.KeyDown {
@@ -36,29 +32,12 @@ class MenubarColorPanel: NSColorPanel {
                     NSLog("Hide \(appName)")
                     NSApplication.sharedApplication().hide(self)
                     return true
-                case Regex(pattern: "[Xx]"):
-                    NSLog("Cut")
-                    if NSApp.sendAction(Selector("cut:"), to: nil, from: self) { return true }
                 case Regex(pattern: "[Cc]"):
                     NSLog("Copy")
                     if NSApp.sendAction(Selector("copy:"), to: nil, from: self) { return true }
-                case Regex(pattern: "[Vv]"):
-                    NSLog("Paste")
-                    if NSApp.sendAction(Selector("paste:"), to: nil, from: self) { return true }
-                case Regex(pattern: "[Zz]"):
-                    NSLog("Undo")
-                    if NSApp.sendAction(Selector("undo:"), to: nil, from: self) { return true }
                 case Regex(pattern: "[Aa]"):
                     NSLog("Select All")
                     if NSApp.sendAction(Selector("selectAll:"), to: nil, from: self) { return true }
-                default:
-                    break
-                }
-            } else if (modifierKey == commandShiftKey) || (modifierKey == commandShiftKey | capslockKey) {
-                switch event.charactersIgnoringModifiers! {
-                case Regex(pattern: "[Zz]"):
-                    NSLog("Redo")
-                    if NSApp.sendAction(Selector("redo:"), to: nil, from: self) { return true }
                 default:
                     break
                 }
@@ -67,34 +46,13 @@ class MenubarColorPanel: NSColorPanel {
         return super.performKeyEquivalent(event)
     }
     
-    func show() {
-        if resetPositionUponOpen {
-            moveToScreenTopRight()
-        }
+    override func cancelOperation(sender: AnyObject?) {
+        close()
+    }
+    
+    func open() {
+        center()
         makeKeyAndOrderFront(delegate)
-    }
-    
-    func hide() {
-        orderOut(delegate)
-    }
-    
-    func toggleVisibility() {
-        if visible {
-            hide()
-        } else {
-            show()
-        }
-    }
-    
-    func moveToScreenTopRight() {
-        
-        var framePadding: CGFloat = screenSize.width / 160 * self.backingScaleFactor
-        
-        let newLocation: NSPoint = NSMakePoint(
-            screenBounds.maxX - frame.width - framePadding,
-            screenBounds.maxY - framePadding
-        )
-        setFrameTopLeftPoint(newLocation)
     }
     
 }
