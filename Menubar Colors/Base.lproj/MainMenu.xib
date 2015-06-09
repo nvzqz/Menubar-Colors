@@ -56,13 +56,13 @@
             </items>
             <point key="canvasLocation" x="346.5" y="251.5"/>
         </menu>
-        <window title="Menubar Colors" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="documentWindow" id="LeK-ig-lpa" customClass="AboutWindow" customModule="Menubar_Colors" customModuleProvider="target">
+        <window allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="documentWindow" id="LeK-ig-lpa" customClass="AboutWindow" customModule="Menubar_Colors" customModuleProvider="target">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" fullSizeContentView="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="283" y="305" width="250" height="258"/>
+            <rect key="contentRect" x="283" y="305" width="250" height="256"/>
             <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
             <view key="contentView" autoresizesSubviews="NO" id="v1v-eE-DCY">
-                <rect key="frame" x="0.0" y="0.0" width="250" height="258"/>
+                <rect key="frame" x="0.0" y="0.0" width="250" height="256"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1UH-nD-juY" userLabel="App Icon Image View">
@@ -120,7 +120,7 @@
                     <constraint firstItem="pc6-id-zKy" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="v1v-eE-DCY" secondAttribute="leading" constant="16" id="hZD-2v-6dX"/>
                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="pc6-id-zKy" secondAttribute="trailing" constant="16" id="hw0-oD-v79"/>
                     <constraint firstItem="pc6-id-zKy" firstAttribute="top" secondItem="8Cg-wn-oeJ" secondAttribute="bottom" constant="20" id="odb-il-erJ"/>
-                    <constraint firstItem="1UH-nD-juY" firstAttribute="top" secondItem="v1v-eE-DCY" secondAttribute="top" constant="26" id="swd-ra-eZw"/>
+                    <constraint firstItem="1UH-nD-juY" firstAttribute="top" secondItem="v1v-eE-DCY" secondAttribute="top" constant="24" id="swd-ra-eZw"/>
                     <constraint firstAttribute="centerX" secondItem="pc6-id-zKy" secondAttribute="centerX" id="v1v-Tl-Ed7"/>
                     <constraint firstItem="lxL-iq-zSP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="v1v-eE-DCY" secondAttribute="leading" constant="16" id="v5d-GW-AEL"/>
                     <constraint firstAttribute="centerX" secondItem="1UH-nD-juY" secondAttribute="centerX" id="yfd-3X-uSX"/>
