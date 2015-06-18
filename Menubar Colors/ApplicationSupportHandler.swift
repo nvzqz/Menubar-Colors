@@ -10,13 +10,24 @@ import Cocoa
 
 class ApplicationSupportHandler: NSObject {
     
+    private var handler: ApplicationSupportHandler?
+    
     var directory: File
-    var preferencesFile: File
+    var preferences: Preferences
     
     override init() {
         let appName = NSBundle.mainBundle().infoDictionary!["CFBundleName"] as! String
         directory = File(path: (NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.ApplicationSupportDirectory, NSSearchPathDomainMask.AllDomainsMask, true)[0] as! String).stringByAppendingPathComponent(appName))
-        preferencesFile = File(path: directory.path.stringByAppendingPathComponent("preferences"))
+        preferences = Preferences(file: directory.path.stringByAppendingPathComponent("Preferences.plist"))
+    }
+    
+    func defaultHandler() -> ApplicationSupportHandler {
+        if let defaultHandler = handler {
+            return defaultHandler
+        } else {
+            handler = ApplicationSupportHandler()
+            return handler!
+        }
     }
     
 }

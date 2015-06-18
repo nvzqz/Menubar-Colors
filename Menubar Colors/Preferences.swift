@@ -8,12 +8,38 @@
 
 import Cocoa
 
-class Preferences: NSObject {
+class Preferences {
     
-    var resetPositionUponOpen: Bool
+    var file: File
+    var dictionary: NSMutableDictionary
     
-    init(resetPositionUponOpen: Bool) {
-        self.resetPositionUponOpen = resetPositionUponOpen
+    var resetPositionUponOpen: Bool {
+        get {
+            if let value = dictionary.objectForKey("Reset Color Panel Position") as? Bool {
+                return value
+            } else {
+                return false
+            }
+        } set {
+            dictionary.setObject(newValue, forKey: "Reset Color Panel Position")
+        }
+    }
+    
+    init(file path: String) {
+        self.file = File(path: path)
+        if let dict = NSMutableDictionary(contentsOfFile: file.path) {
+            self.dictionary = dict
+        } else {
+            self.dictionary = NSMutableDictionary()
+        }
+    }
+    
+    func write() -> Bool {
+        return dictionary.writeToFile(file.path, atomically: false)
+    }
+    
+    func read() -> NSMutableDictionary? {
+        return NSMutableDictionary(contentsOfFile: file.path)
     }
 
 }
