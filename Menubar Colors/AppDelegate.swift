@@ -39,9 +39,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, NSMenuDele
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         //  Set the preferences object
         preferences = ApplicationSupportHandler.defaultHandler().preferences
-        if let output = preferences.read() {
-            preferences.dictionary = output
-        }
         
         //  Set icon image
         let icon = NSImage(named: "statusIcon")
