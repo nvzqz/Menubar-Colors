@@ -30,26 +30,33 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, NSMenuDele
         }
     }
     
+    var preferences: Preferences!
     var colorPanel: MenubarColorPanel?
     
     var statusItem: NSStatusItem?
     var statusButton: NSStatusBarButton?
     
     func applicationDidFinishLaunching(aNotification: NSNotification) {
-        //Set icon image
+        //  Set the preferences object
+        preferences = ApplicationSupportHandler.defaultHandler().preferences
+        if let output = preferences.read() {
+            preferences.dictionary = output
+        }
+        
+        //  Set icon image
         let icon = NSImage(named: "statusIcon")
         icon!.setTemplate(true)
         statusItem!.image = icon
     }
     
     override func awakeFromNib() {
-        //Instantiate colorPanel and adjust
+        //  Instantiate colorPanel and adjust
         colorPanel = MenubarColorPanel()
         colorPanel?.delegate          = self
         colorPanel?.hidesOnDeactivate = false
         colorPanel?.moveToScreenTopRight()
         
-        //Set up the about window
+        //  Set up the about window
         aboutWindow.delegate                   = self
         aboutWindow.titlebarAppearsTransparent = true
         aboutWindow.movableByWindowBackground  = true
@@ -62,11 +69,11 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, NSMenuDele
         aboutProjectLinkButton.stringValue     = projectLinkText
         aboutCopyrightLabel.stringValue        = (NSBundle.mainBundle().infoDictionary!["NSHumanReadableCopyright"]) as! String
         
-        //Set status bar item to default size
+        //  Set status bar item to default size
         let statusBar = NSStatusBar.systemStatusBar()
         statusItem = statusBar.statusItemWithLength(-1)
         
-        //Set status button and action
+        //  Set status button and action
         statusButton         = statusItem!.button!
         statusButton?.target = self
         statusButton?.action = "statusButtonPressed:"
@@ -83,6 +90,11 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, NSMenuDele
             } else {
                 colorsMenuItem.title = "Hide Colors"
             }
+            if  preferences.resetPositionUponOpen {
+                resetPositionMenuItem.state = NSOnState
+            } else {
+                resetPositionMenuItem.state = NSOffState
+            }
             statusItem?.menu = statusMenu
             statusItem?.popUpStatusItemMenu(statusMenu)
         } else {
@@ -90,13 +102,13 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, NSMenuDele
         }
     }
     
-    //Disable left click menu upon close
+    //  Disable left click menu upon close
     func menuDidClose(menu: NSMenu) {
         statusItem?.menu = nil
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
-        // Insert code here to tear down your application
+        //  Insert code here to tear down your application
         NSLog("Terminating...\nExecution time = %f seconds", executionTime)
     }
     
@@ -107,11 +119,12 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, NSMenuDele
     @IBAction func resetPositionMenuItemSelected(sender: NSMenuItem) {
         if sender.state == NSOffState {
             sender.state = NSOnState
-            colorPanel?.resetPositionUponOpen = true
+            preferences.resetPositionUponOpen = true
         } else {
             sender.state = NSOffState
-            colorPanel?.resetPositionUponOpen = false
+            preferences.resetPositionUponOpen = false
         }
+        preferences.write()
     }
     
     @IBAction func aboutMenuItemSelected(sender: NSMenuItem) {

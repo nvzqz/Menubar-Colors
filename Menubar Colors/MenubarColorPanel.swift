@@ -16,7 +16,6 @@ class MenubarColorPanel: NSColorPanel {
     
     private let screenBounds: NSRect = NSScreen.mainScreen()!.visibleFrame
     private let screenSize:   NSRect = NSScreen.mainScreen()!.frame
-    var resetPositionUponOpen: Bool = false
     
     override func performKeyEquivalent(event: NSEvent) -> Bool {
         if event.type == NSEventType.KeyDown {
@@ -68,7 +67,7 @@ class MenubarColorPanel: NSColorPanel {
     }
     
     func show() {
-        if resetPositionUponOpen {
+        if ApplicationSupportHandler.defaultHandler().preferences.resetPositionUponOpen {
             moveToScreenTopRight()
         }
         makeKeyAndOrderFront(delegate)
