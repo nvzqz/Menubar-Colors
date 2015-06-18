@@ -10,18 +10,13 @@ import Cocoa
 
 class ApplicationSupportHandler: NSObject {
     
-    let directory: String
-    var files: [String] {
-        if let contents = NSFileManager.defaultManager().contentsOfDirectoryAtPath(directory, error: nil) {
-            return contents as! [String]
-        } else {
-            return [String]()
-        }
-    }
+    var directory: File
+    var preferencesFile: File
     
     override init() {
         let appName = NSBundle.mainBundle().infoDictionary!["CFBundleName"] as! String
-        directory = (NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.ApplicationSupportDirectory, NSSearchPathDomainMask.AllDomainsMask, true)[0] as! String).stringByAppendingPathComponent(appName)
+        directory = File(path: (NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.ApplicationSupportDirectory, NSSearchPathDomainMask.AllDomainsMask, true)[0] as! String).stringByAppendingPathComponent(appName))
+        preferencesFile = File(path: directory.path.stringByAppendingPathComponent("preferences"))
     }
     
 }
