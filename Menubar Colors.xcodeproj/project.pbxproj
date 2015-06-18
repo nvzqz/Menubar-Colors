@@ -12,19 +12,8 @@
 		243060FA1B1A93C500E63FBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243060F91B1A93C500E63FBB /* AppDelegate.swift */; };
 		243060FC1B1A93C500E63FBB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 243060FB1B1A93C500E63FBB /* Images.xcassets */; };
 		243060FF1B1A93C500E63FBB /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 243060FD1B1A93C500E63FBB /* MainMenu.xib */; };
-		2430610B1B1A93C500E63FBB /* Menubar_ColorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2430610A1B1A93C500E63FBB /* Menubar_ColorsTests.swift */; };
 		247210451B221E6A00E63FBB /* AboutWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247210441B221E6A00E63FBB /* AboutWindow.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		243061051B1A93C500E63FBB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 243060EC1B1A93C400E63FBB /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 243060F31B1A93C400E63FBB;
-			remoteInfo = "Menubar Colors";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		240513071B1E4F0000E63FBB /* Regex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
@@ -34,21 +23,11 @@
 		243060F91B1A93C500E63FBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		243060FB1B1A93C500E63FBB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		243060FE1B1A93C500E63FBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		243061041B1A93C500E63FBB /* Menubar ColorsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Menubar ColorsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		243061091B1A93C500E63FBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2430610A1B1A93C500E63FBB /* Menubar_ColorsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menubar_ColorsTests.swift; sourceTree = "<group>"; };
 		247210441B221E6A00E63FBB /* AboutWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutWindow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		243060F11B1A93C400E63FBB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		243061011B1A93C500E63FBB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -62,7 +41,6 @@
 			isa = PBXGroup;
 			children = (
 				243060F61B1A93C500E63FBB /* Menubar Colors */,
-				243061071B1A93C500E63FBB /* Menubar ColorsTests */,
 				243060F51B1A93C500E63FBB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -71,7 +49,6 @@
 			isa = PBXGroup;
 			children = (
 				243060F41B1A93C500E63FBB /* Menubar Colors.app */,
-				243061041B1A93C500E63FBB /* Menubar ColorsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -88,23 +65,6 @@
 			isa = PBXGroup;
 			children = (
 				243060F81B1A93C500E63FBB /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		243061071B1A93C500E63FBB /* Menubar ColorsTests */ = {
-			isa = PBXGroup;
-			children = (
-				2430610A1B1A93C500E63FBB /* Menubar_ColorsTests.swift */,
-				243061081B1A93C500E63FBB /* Supporting Files */,
-			);
-			path = "Menubar ColorsTests";
-			sourceTree = "<group>";
-		};
-		243061081B1A93C500E63FBB /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				243061091B1A93C500E63FBB /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -143,24 +103,6 @@
 			productReference = 243060F41B1A93C500E63FBB /* Menubar Colors.app */;
 			productType = "com.apple.product-type.application";
 		};
-		243061031B1A93C500E63FBB /* Menubar ColorsTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 243061111B1A93C500E63FBB /* Build configuration list for PBXNativeTarget "Menubar ColorsTests" */;
-			buildPhases = (
-				243061001B1A93C500E63FBB /* Sources */,
-				243061011B1A93C500E63FBB /* Frameworks */,
-				243061021B1A93C500E63FBB /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				243061061B1A93C500E63FBB /* PBXTargetDependency */,
-			);
-			name = "Menubar ColorsTests";
-			productName = "Menubar ColorsTests";
-			productReference = 243061041B1A93C500E63FBB /* Menubar ColorsTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -172,10 +114,6 @@
 				TargetAttributes = {
 					243060F31B1A93C400E63FBB = {
 						CreatedOnToolsVersion = 6.3.2;
-					};
-					243061031B1A93C500E63FBB = {
-						CreatedOnToolsVersion = 6.3.2;
-						TestTargetID = 243060F31B1A93C400E63FBB;
 					};
 				};
 			};
@@ -193,7 +131,6 @@
 			projectRoot = "";
 			targets = (
 				243060F31B1A93C400E63FBB /* Menubar Colors */,
-				243061031B1A93C500E63FBB /* Menubar ColorsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -205,13 +142,6 @@
 			files = (
 				243060FC1B1A93C500E63FBB /* Images.xcassets in Resources */,
 				243060FF1B1A93C500E63FBB /* MainMenu.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		243061021B1A93C500E63FBB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,23 +159,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		243061001B1A93C500E63FBB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2430610B1B1A93C500E63FBB /* Menubar_ColorsTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		243061061B1A93C500E63FBB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 243060F31B1A93C400E63FBB /* Menubar Colors */;
-			targetProxy = 243061051B1A93C500E63FBB /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		243060FD1B1A93C500E63FBB /* MainMenu.xib */ = {
@@ -366,42 +280,6 @@
 			};
 			name = Release;
 		};
-		243061121B1A93C500E63FBB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "Menubar ColorsTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Menubar Colors.app/Contents/MacOS/Menubar Colors";
-			};
-			name = Debug;
-		};
-		243061131B1A93C500E63FBB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "Menubar ColorsTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Menubar Colors.app/Contents/MacOS/Menubar Colors";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -419,15 +297,6 @@
 			buildConfigurations = (
 				2430610F1B1A93C500E63FBB /* Debug */,
 				243061101B1A93C500E63FBB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		243061111B1A93C500E63FBB /* Build configuration list for PBXNativeTarget "Menubar ColorsTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				243061121B1A93C500E63FBB /* Debug */,
-				243061131B1A93C500E63FBB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
