@@ -1,2 +1,40 @@
-# Menubar-Colors
-A menubar app for convenient access to OS X's color picker
+# Menubar Colors#
+## What is this? ##
+This a utility that runs in the OS X menubar that allows for easy access to the system-wide color picker.
+
+## How do you use this? ##
+Left click toggles the color picker's visibility. <br/>
+Right click opens a drop down menu of options.
+
+## Who is this for? ##
+This utility was designed for designers and developers who need quick access to the color panel. I chose to use the system color panel rather than make my own because of how extensible it is.
+
+## Recommended Plugins ##
+* [Skala Color](http://bjango.com/mac/skalacolor/) <br/> `brew cask install colorpicker-skalacolor`
+* [Antetype Color Picker](http://www.antetype.com/blog/2014/03/updated-antetype-color-picker-1-4-1/) <br/> `brew cask install colorpicker-antetype`
+* [Developer Color Picker](http://download.panic.com/picker/) <br/> `brew cask install colorpicker-developer`
+
+## License ##
+This project is licensed under the [MIT License](http://opensource.org/licenses/MIT). Anyone is free to edit and improve the code here or use it for another project.
+
+#### The MIT License (MIT) ####
+
+Copyright (c) 2015 Nikolai Vazquez
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
