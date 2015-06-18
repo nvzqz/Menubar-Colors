@@ -14,6 +14,7 @@
 		243060FF1B1A93C500E63FBB /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 243060FD1B1A93C500E63FBB /* MainMenu.xib */; };
 		247210451B221E6A00E63FBB /* AboutWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247210441B221E6A00E63FBB /* AboutWindow.swift */; };
 		249A7EAD1B336ABD00E63FBB /* ApplicationSupportHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249A7EAC1B336ABD00E63FBB /* ApplicationSupportHandler.swift */; };
+		249A7EB11B3371CB00E63FBB /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249A7EB01B3371CB00E63FBB /* File.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		243060FE1B1A93C500E63FBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		247210441B221E6A00E63FBB /* AboutWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutWindow.swift; sourceTree = "<group>"; };
 		249A7EAC1B336ABD00E63FBB /* ApplicationSupportHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationSupportHandler.swift; sourceTree = "<group>"; };
+		249A7EB01B3371CB00E63FBB /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				243060F71B1A93C500E63FBB /* Supporting Files */,
 				243060F91B1A93C500E63FBB /* AppDelegate.swift */,
 				249A7EAC1B336ABD00E63FBB /* ApplicationSupportHandler.swift */,
+				249A7EB01B3371CB00E63FBB /* File.swift */,
 				240513071B1E4F0000E63FBB /* Regex.swift */,
 				247210441B221E6A00E63FBB /* AboutWindow.swift */,
 				2405130A1B1E4FC900E63FBB /* MenubarColorPanel.swift */,
@@ -156,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				243060FA1B1A93C500E63FBB /* AppDelegate.swift in Sources */,
+				249A7EB11B3371CB00E63FBB /* File.swift in Sources */,
 				240513081B1E4F0000E63FBB /* Regex.swift in Sources */,
 				249A7EAD1B336ABD00E63FBB /* ApplicationSupportHandler.swift in Sources */,
 				2405130C1B1E4FC900E63FBB /* MenubarColorPanel.swift in Sources */,
