@@ -10,7 +10,7 @@ import Cocoa
 
 class ApplicationSupportHandler: NSObject {
     
-    private var handler: ApplicationSupportHandler?
+    static private var handler: ApplicationSupportHandler?
     
     var directory: File
     var preferences: Preferences
@@ -21,7 +21,7 @@ class ApplicationSupportHandler: NSObject {
         preferences = Preferences(file: directory.path.stringByAppendingPathComponent("Preferences.plist"))
     }
     
-    func defaultHandler() -> ApplicationSupportHandler {
+    static func defaultHandler() -> ApplicationSupportHandler {
         if let defaultHandler = handler {
             return defaultHandler
         } else {

@@ -10,18 +10,20 @@ import Cocoa
 
 class Preferences {
     
+    private var resetPositionKey = "Reset Color Panel Position"
+    
     var file: File
     var dictionary: NSMutableDictionary
     
     var resetPositionUponOpen: Bool {
         get {
-            if let value = dictionary.objectForKey("Reset Color Panel Position") as? Bool {
+            if let value = dictionary.objectForKey(resetPositionKey) as? Bool {
                 return value
             } else {
                 return false
             }
         } set {
-            dictionary.setObject(newValue, forKey: "Reset Color Panel Position")
+            dictionary.setObject(newValue, forKey: resetPositionKey)
         }
     }
     
