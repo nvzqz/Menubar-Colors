@@ -34,6 +34,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, NSMenuDele
     @IBOutlet weak var statusMenu: NSMenu!
     @IBOutlet weak var colorsMenuItem: NSMenuItem!
     @IBOutlet weak var resetPositionMenuItem: NSMenuItem!
+    @IBOutlet weak var startAtLoginMenuItem: NSMenuItem!
     
     @IBOutlet weak var aboutWindow: AboutWindow!
     @IBOutlet weak var aboutAppNameLabel: NSTextField!
@@ -107,11 +108,19 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, NSMenuDele
             } else {
                 colorsMenuItem.title = "Hide Colors"
             }
+            
             if  preferences.resetPositionUponOpen {
                 resetPositionMenuItem.state = NSOnState
             } else {
                 resetPositionMenuItem.state = NSOffState
             }
+            
+            if LoginItemsManager.defaultManager().startAtLogin {
+                startAtLoginMenuItem.state = NSOnState
+            } else {
+                startAtLoginMenuItem.state = NSOffState
+            }
+            
             statusItem?.menu = statusMenu
             statusItem?.popUpStatusItemMenu(statusMenu)
         } else {
@@ -142,6 +151,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, NSMenuDele
             preferences.resetPositionUponOpen = false
         }
         preferences.write()
+    }
+    
+    @IBAction func startAtLoginMenuItemSelected(sender: NSMenuItem) {
+        LoginItemsManager.defaultManager().toggleStartAtLogin()
     }
     
     @IBAction func aboutMenuItemSelected(sender: NSMenuItem) {
