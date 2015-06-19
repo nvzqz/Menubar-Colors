@@ -90,9 +90,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, NSMenuDele
         statusItem = statusBar.statusItemWithLength(-1)
         
         //  Set status button and action
-        statusButton         = statusItem!.button!
-        statusButton?.target = self
-        statusButton?.action = "statusButtonPressed:"
+        statusButton          = statusItem!.button!
+        statusButton?.toolTip = "Click to open the color panel\nRight click to open the menu"
+        statusButton?.target  = self
+        statusButton?.action  = "statusButtonPressed:"
         statusButton?.sendActionOn(Int((NSEventMask.LeftMouseUpMask | NSEventMask.RightMouseUpMask).rawValue))
         
         statusMenu.delegate  = self
