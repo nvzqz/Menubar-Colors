@@ -21,6 +21,7 @@
                 <outlet property="aboutWindow" destination="LeK-ig-lpa" id="JWu-Ci-mFN"/>
                 <outlet property="colorsMenuItem" destination="TKa-xI-QXc" id="Z1N-e2-fSM"/>
                 <outlet property="resetPositionMenuItem" destination="NM5-3u-nFi" id="44m-Gq-urE"/>
+                <outlet property="startAtLoginMenuItem" destination="2tq-0Z-uE3" id="K6q-ux-jX3"/>
                 <outlet property="statusMenu" destination="Gqi-Lp-YJq" id="sYq-H3-6ix"/>
             </connections>
         </customObject>
@@ -40,6 +41,12 @@
                         <action selector="resetPositionMenuItemSelected:" target="Voe-Tx-rLC" id="8Ij-eY-LWC"/>
                     </connections>
                 </menuItem>
+                <menuItem title="Start at Login" id="2tq-0Z-uE3">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="startAtLoginMenuItemSelected:" target="Voe-Tx-rLC" id="yUY-xf-EbE"/>
+                    </connections>
+                </menuItem>
                 <menuItem isSeparatorItem="YES" id="mDV-Wo-W7d"/>
                 <menuItem title="About" id="EYm-DN-hfo">
                     <modifierMask key="keyEquivalentModifierMask"/>
@@ -53,7 +60,7 @@
                     </connections>
                 </menuItem>
             </items>
-            <point key="canvasLocation" x="346.5" y="251.5"/>
+            <point key="canvasLocation" x="-31.5" y="175.5"/>
         </menu>
         <window allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="none" id="LeK-ig-lpa" customClass="AboutWindow" customModule="Menubar_Colors" customModuleProvider="target">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" fullSizeContentView="YES"/>
