@@ -36,7 +36,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, NSMenuDele
     @IBOutlet weak var resetPositionMenuItem: NSMenuItem!
     
     @IBOutlet weak var aboutWindow: AboutWindow!
-    @IBOutlet weak var aboutAppIconImageView: NSImageView!
     @IBOutlet weak var aboutAppNameLabel: NSTextField!
     @IBOutlet weak var aboutVersionLabel: NSTextField!
     @IBOutlet weak var aboutProjectLinkButton: NSButton!
@@ -78,7 +77,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, NSMenuDele
         aboutWindow.titlebarAppearsTransparent = true
         aboutWindow.movableByWindowBackground  = true
         aboutWindow.backgroundColor            = NSColor(red:1, green:1, blue:1, alpha:1)
-        aboutAppIconImageView.image            = NSApp.applicationIconImage
+        aboutWindow.level = Int(CGWindowLevelKey((kCGModalPanelWindowLevelKey)))
         aboutAppNameLabel.stringValue          = (NSBundle.mainBundle().infoDictionary!["CFBundleName"]) as! String
         aboutVersionLabel.stringValue          = "Version " + (NSBundle.mainBundle().infoDictionary!["CFBundleVersion"] as! String)
         let projectLinkText                    = "GitHub Project Page"
