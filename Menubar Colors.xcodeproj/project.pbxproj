@@ -16,6 +16,7 @@
 		249A7EAD1B336ABD00E63FBB /* ApplicationSupportHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249A7EAC1B336ABD00E63FBB /* ApplicationSupportHandler.swift */; };
 		249A7EB11B3371CB00E63FBB /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249A7EB01B3371CB00E63FBB /* File.swift */; };
 		249A7EB51B33786100E63FBB /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249A7EB41B33786100E63FBB /* Preferences.swift */; };
+		24CCED541B33ECB900E63FBB /* LoginItemsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CCED531B33ECB900E63FBB /* LoginItemsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		249A7EAC1B336ABD00E63FBB /* ApplicationSupportHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationSupportHandler.swift; sourceTree = "<group>"; };
 		249A7EB01B3371CB00E63FBB /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		249A7EB41B33786100E63FBB /* Preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
+		24CCED531B33ECB900E63FBB /* LoginItemsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginItemsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				243060FD1B1A93C500E63FBB /* MainMenu.xib */,
 				243060F71B1A93C500E63FBB /* Supporting Files */,
 				243060F91B1A93C500E63FBB /* AppDelegate.swift */,
+				24CCED531B33ECB900E63FBB /* LoginItemsManager.swift */,
 				249A7EAC1B336ABD00E63FBB /* ApplicationSupportHandler.swift */,
 				249A7EB01B3371CB00E63FBB /* File.swift */,
 				249A7EB41B33786100E63FBB /* Preferences.swift */,
@@ -161,6 +164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24CCED541B33ECB900E63FBB /* LoginItemsManager.swift in Sources */,
 				243060FA1B1A93C500E63FBB /* AppDelegate.swift in Sources */,
 				249A7EB51B33786100E63FBB /* Preferences.swift in Sources */,
 				249A7EB11B3371CB00E63FBB /* File.swift in Sources */,
