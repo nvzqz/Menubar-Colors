@@ -146,6 +146,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, NSMenuDele
     
     @IBAction func aboutMenuItemSelected(sender: NSMenuItem) {
         if !aboutWindow.visible {
+            NSApplication.sharedApplication().activateIgnoringOtherApps(true)
             aboutWindow.open()
         }
     }
