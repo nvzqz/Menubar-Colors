@@ -41,6 +41,10 @@ class File: NSObject {
         return NSFileManager.defaultManager().fileExistsAtPath(path)
     }
     
+    var parent: File {
+        return File(path: path.stringByDeletingLastPathComponent)
+    }
+    
     init(path: String, encoding: UInt = NSUTF8StringEncoding) {
         self.path = path
         self.encoding = encoding
