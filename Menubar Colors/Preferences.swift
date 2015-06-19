@@ -57,6 +57,9 @@ class Preferences {
     }
     
     func write() -> Bool {
+        if !file.parent.exists {
+            file.parent.createDirectory()
+        }
         return dictionary.writeToFile(file.path, atomically: false)
     }
     
