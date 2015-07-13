@@ -48,7 +48,8 @@
 		243060EB1B1A93C400E63FBB = {
 			isa = PBXGroup;
 			children = (
-				243060F61B1A93C500E63FBB /* Menubar Colors */,
+				2477CB181B5420DE00E63FBB /* Sources */,
+				243060F71B1A93C500E63FBB /* Supporting Files */,
 				243060F51B1A93C500E63FBB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,38 +62,82 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		243060F61B1A93C500E63FBB /* Menubar Colors */ = {
+		243060F71B1A93C500E63FBB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				24A691AC1B1BD4E100E63FBB /* Application */,
+				2477CB191B54215E00E63FBB /* Property Lists */,
+				2477CB1A1B54216800E63FBB /* Images */,
+				2477CB1B1B54220600E63FBB /* Interface Builder Files */,
 			);
+			name = "Supporting Files";
 			path = "Menubar Colors";
 			sourceTree = "<group>";
 		};
-		243060F71B1A93C500E63FBB /* Supporting Files */ = {
+		2477CB181B5420DE00E63FBB /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				2477CB1C1B54229F00E63FBB /* GUI */,
+				2477CB1D1B5422A700E63FBB /* System */,
+				2477CB1E1B5422AD00E63FBB /* Lang */,
+			);
+			name = Sources;
+			path = sources;
+			sourceTree = SOURCE_ROOT;
+		};
+		2477CB191B54215E00E63FBB /* Property Lists */ = {
 			isa = PBXGroup;
 			children = (
 				243060F81B1A93C500E63FBB /* Info.plist */,
 			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
+			name = "Property Lists";
+			path = plists;
+			sourceTree = SOURCE_ROOT;
 		};
-		24A691AC1B1BD4E100E63FBB /* Application */ = {
+		2477CB1A1B54216800E63FBB /* Images */ = {
 			isa = PBXGroup;
 			children = (
 				243060FB1B1A93C500E63FBB /* Images.xcassets */,
+			);
+			name = Images;
+			path = images;
+			sourceTree = SOURCE_ROOT;
+		};
+		2477CB1B1B54220600E63FBB /* Interface Builder Files */ = {
+			isa = PBXGroup;
+			children = (
 				243060FD1B1A93C500E63FBB /* MainMenu.xib */,
-				243060F71B1A93C500E63FBB /* Supporting Files */,
+			);
+			name = "Interface Builder Files";
+			path = interfaces;
+			sourceTree = SOURCE_ROOT;
+		};
+		2477CB1C1B54229F00E63FBB /* GUI */ = {
+			isa = PBXGroup;
+			children = (
 				243060F91B1A93C500E63FBB /* AppDelegate.swift */,
-				24CCED531B33ECB900E63FBB /* LoginItemsManager.swift */,
-				249A7EAC1B336ABD00E63FBB /* ApplicationSupportHandler.swift */,
-				249A7EB01B3371CB00E63FBB /* File.swift */,
-				249A7EB41B33786100E63FBB /* Preferences.swift */,
-				240513071B1E4F0000E63FBB /* Regex.swift */,
 				247210441B221E6A00E63FBB /* AboutWindow.swift */,
 				2405130A1B1E4FC900E63FBB /* MenubarColorPanel.swift */,
 			);
-			name = Application;
+			name = GUI;
+			sourceTree = "<group>";
+		};
+		2477CB1D1B5422A700E63FBB /* System */ = {
+			isa = PBXGroup;
+			children = (
+				249A7EAC1B336ABD00E63FBB /* ApplicationSupportHandler.swift */,
+				24CCED531B33ECB900E63FBB /* LoginItemsManager.swift */,
+				249A7EB01B3371CB00E63FBB /* File.swift */,
+				249A7EB41B33786100E63FBB /* Preferences.swift */,
+			);
+			name = System;
+			sourceTree = "<group>";
+		};
+		2477CB1E1B5422AD00E63FBB /* Lang */ = {
+			isa = PBXGroup;
+			children = (
+				240513071B1E4F0000E63FBB /* Regex.swift */,
+			);
+			name = Lang;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,7 +322,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "Menubar Colors";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Menubar Colors";
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "Menubar Colors/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/plists/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -289,7 +334,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "Menubar Colors";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Menubar Colors";
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "Menubar Colors/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/plists/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
