@@ -1,23 +1,27 @@
-# Menubar Colors#
-## What is this? ##
-This a utility that runs in the OS X menubar that allows for easy access to the system-wide color picker.
+# Menubar Colors
+[![OS X Version](http://img.shields.io/badge/OS%20X-10.10%2B-lightgrey.svg)]()
+[![Release Version](https://img.shields.io/badge/release-v1.4.0-blue.svg)]() 
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)]()
 
-## How do you use this? ##
-Left click toggles the color picker's visibility. <br/>
+## What is this?
+This a utility that runs in the OS X menubar that allows for easy access to the system-wide color panel.
+
+## How do you use this?
+Left click toggles the color panel's visibility. <br/>
 Right click opens a drop down menu of options.
 
-## Who is this for? ##
+## Who is this for?
 This utility was designed for designers and developers who need quick access to the color panel. I chose to use the system color panel rather than make my own because of how extensible it is.
 
-## Recommended Plugins ##
+## Recommended Plugins
 * [Skala Color](http://bjango.com/mac/skalacolor/) <br/> `brew cask install colorpicker-skalacolor`
 * [Antetype Color Picker](http://www.antetype.com/blog/2014/03/updated-antetype-color-picker-1-4-1/) <br/> `brew cask install colorpicker-antetype`
 * [Developer Color Picker](http://download.panic.com/picker/) <br/> `brew cask install colorpicker-developer`
 
-## License ##
+## License
 This project is licensed under the [MIT License](http://opensource.org/licenses/MIT). Anyone is free to edit and improve the code here or use it for another project.
 
-#### The MIT License (MIT) ####
+#### The MIT License (MIT)
 
 Copyright (c) 2015 Nikolai Vazquez
 
