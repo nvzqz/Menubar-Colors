@@ -1,25 +1,61 @@
 # Menubar Colors
+
 [![OS X Version](http://img.shields.io/badge/OS%20X-10.10%2B-lightgrey.svg)]()
-[![Release Version](https://img.shields.io/badge/release-v1.4.0-blue.svg)]() 
+[![Release Version](https://img.shields.io/badge/release-v1.4.0-blue.svg)]()
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)]()
 
 ## What is this?
-This a utility that runs in the OS X menubar that allows for easy access to the system-wide color panel.
+
+This a utility that runs in the OS X menubar that allows for quick access to the
+system-wide color panel.
+
+![Example](./Example.jpg)
+
+## Installation
+
+### Download
+
+[Latest release](https://github.com/nvzqz/Menubar-Colors/releases/latest)
+
+### Cask
+
+`brew cask install menubar-colors`
 
 ## How do you use this?
+
 Left click toggles the color panel's visibility. <br/>
 Right click opens a drop down menu of options.
 
 ## Who is this for?
-This utility was designed for designers and developers who need quick access to the color panel. I chose to use the system color panel rather than make my own because of how extensible it is.
+
+This utility was designed for designers and developers who need quick access to
+the color panel. I chose to use the system color panel rather than make my own
+because of how extensible it is.
 
 ## Recommended Plugins
-* [Skala Color](http://bjango.com/mac/skalacolor/) <br/> `brew cask install colorpicker-skalacolor`
-* [Antetype Color Picker](http://www.antetype.com/blog/2014/03/updated-antetype-color-picker-1-4-1/) <br/> `brew cask install colorpicker-antetype`
-* [Developer Color Picker](http://download.panic.com/picker/) <br/> `brew cask install colorpicker-developer`
+
+### Skala Color
+
+[Download](http://bjango.com/mac/skalacolor/)
+
+Cask: `brew cask install colorpicker-skalacolor`
+
+### Antetype Color Picker
+
+[Download](http://www.antetype.com/blog/2014/03/updated-antetype-color-picker-1-4-1/)
+
+Cask: `brew cask install colorpicker-antetype`
+
+### Developer Color Picker
+
+[Download](http://download.panic.com/picker/)
+
+Cask: `brew cask install colorpicker-developer`
 
 ## License
-This project is licensed under the [MIT License](http://opensource.org/licenses/MIT). Anyone is free to edit and improve the code here or use it for another project.
+
+This project is licensed under the [MIT License](http://opensource.org/licenses/MIT).
+Anyone is free to edit and improve the code here or use it for another project.
 
 #### The MIT License (MIT)
 
