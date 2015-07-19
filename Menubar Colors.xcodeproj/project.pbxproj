@@ -7,17 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24322F341B5C536400871B7F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24322F331B5C536400871B7F /* MainMenu.xib */; };
 		243776431B5C4CF300A178B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243776421B5C4CF300A178B2 /* AppDelegate.swift */; };
 		243776451B5C4CF300A178B2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 243776441B5C4CF300A178B2 /* Images.xcassets */; };
-		243776481B5C4CF300A178B2 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 243776461B5C4CF300A178B2 /* MainMenu.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		24322F331B5C536400871B7F /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		2437763D1B5C4CF300A178B2 /* Menubar Colors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Menubar Colors.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		243776411B5C4CF300A178B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		243776421B5C4CF300A178B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		243776441B5C4CF300A178B2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		243776471B5C4CF300A178B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +52,7 @@
 			children = (
 				243776421B5C4CF300A178B2 /* AppDelegate.swift */,
 				243776441B5C4CF300A178B2 /* Images.xcassets */,
-				243776461B5C4CF300A178B2 /* MainMenu.xib */,
+				24322F331B5C536400871B7F /* MainMenu.xib */,
 				243776401B5C4CF300A178B2 /* Supporting Files */,
 			);
 			path = "Menubar Colors";
@@ -124,7 +124,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				243776451B5C4CF300A178B2 /* Images.xcassets in Resources */,
-				243776481B5C4CF300A178B2 /* MainMenu.xib in Resources */,
+				24322F341B5C536400871B7F /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,17 +140,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		243776461B5C4CF300A178B2 /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				243776471B5C4CF300A178B2 /* Base */,
-			);
-			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		243776551B5C4CF300A178B2 /* Debug */ = {
