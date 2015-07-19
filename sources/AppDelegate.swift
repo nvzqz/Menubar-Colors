@@ -80,7 +80,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, NSMenuDele
         aboutWindow.backgroundColor            = NSColor(red:1, green:1, blue:1, alpha:1)
         aboutWindow.level = Int(CGWindowLevelKey((kCGModalPanelWindowLevelKey)))
         aboutAppNameLabel.stringValue          = (NSBundle.mainBundle().infoDictionary!["CFBundleName"]) as! String
-        aboutVersionLabel.stringValue          = "Version " + (NSBundle.mainBundle().infoDictionary!["CFBundleVersion"] as! String)
+        aboutVersionLabel.stringValue          = "Version " + (NSBundle.mainBundle().infoDictionary!["CFBundleShortVersionString"] as! String)
         let projectLinkText                    = "GitHub Project Page"
         aboutProjectLinkButton.title           = projectLinkText
         aboutProjectLinkButton.stringValue     = projectLinkText
