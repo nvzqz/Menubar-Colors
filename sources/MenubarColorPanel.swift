@@ -34,8 +34,12 @@ class MenubarColorPanel: NSColorPanel {
     private let commandKey      = NSEventModifierFlags.CommandKeyMask.rawValue
     private let commandShiftKey = NSEventModifierFlags.CommandKeyMask.rawValue | NSEventModifierFlags.ShiftKeyMask.rawValue
     
-    private let screenBounds: NSRect = NSScreen.mainScreen()!.visibleFrame
-    private let screenSize:   NSRect = NSScreen.mainScreen()!.frame
+    private var screenBounds: NSRect {
+        return NSScreen.mainScreen()!.visibleFrame
+    }
+    private var screenSize: NSRect {
+        return NSScreen.mainScreen()!.frame
+    }
     
     override func performKeyEquivalent(event: NSEvent) -> Bool {
         if event.type == NSEventType.KeyDown {
