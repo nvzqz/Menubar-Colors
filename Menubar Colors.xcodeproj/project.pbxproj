@@ -11,11 +11,11 @@
 		2405130C1B1E4FC900E63FBB /* MenubarColorPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2405130A1B1E4FC900E63FBB /* MenubarColorPanel.swift */; };
 		243060FA1B1A93C500E63FBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243060F91B1A93C500E63FBB /* AppDelegate.swift */; };
 		243060FC1B1A93C500E63FBB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 243060FB1B1A93C500E63FBB /* Images.xcassets */; };
-		243060FF1B1A93C500E63FBB /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 243060FD1B1A93C500E63FBB /* MainMenu.xib */; };
 		247210451B221E6A00E63FBB /* AboutWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247210441B221E6A00E63FBB /* AboutWindow.swift */; };
 		249A7EAD1B336ABD00E63FBB /* ApplicationSupportHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249A7EAC1B336ABD00E63FBB /* ApplicationSupportHandler.swift */; };
 		249A7EB11B3371CB00E63FBB /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249A7EB01B3371CB00E63FBB /* File.swift */; };
 		249A7EB51B33786100E63FBB /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249A7EB41B33786100E63FBB /* Preferences.swift */; };
+		249BF0791B5C2DA500B75E04 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 249BF0781B5C2DA500B75E04 /* MainMenu.xib */; };
 		24CCED541B33ECB900E63FBB /* LoginItemsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CCED531B33ECB900E63FBB /* LoginItemsManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -26,11 +26,11 @@
 		243060F81B1A93C500E63FBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		243060F91B1A93C500E63FBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		243060FB1B1A93C500E63FBB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		243060FE1B1A93C500E63FBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		247210441B221E6A00E63FBB /* AboutWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutWindow.swift; sourceTree = "<group>"; };
 		249A7EAC1B336ABD00E63FBB /* ApplicationSupportHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationSupportHandler.swift; sourceTree = "<group>"; };
 		249A7EB01B3371CB00E63FBB /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		249A7EB41B33786100E63FBB /* Preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
+		249BF0781B5C2DA500B75E04 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		24CCED531B33ECB900E63FBB /* LoginItemsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginItemsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,7 +105,7 @@
 		2477CB1B1B54220600E63FBB /* Interface Builder Files */ = {
 			isa = PBXGroup;
 			children = (
-				243060FD1B1A93C500E63FBB /* MainMenu.xib */,
+				249BF0781B5C2DA500B75E04 /* MainMenu.xib */,
 			);
 			name = "Interface Builder Files";
 			path = interfaces;
@@ -198,7 +198,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				243060FC1B1A93C500E63FBB /* Images.xcassets in Resources */,
-				243060FF1B1A93C500E63FBB /* MainMenu.xib in Resources */,
+				249BF0791B5C2DA500B75E04 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,17 +221,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		243060FD1B1A93C500E63FBB /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				243060FE1B1A93C500E63FBB /* Base */,
-			);
-			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		2430610C1B1A93C500E63FBB /* Debug */ = {
