@@ -31,14 +31,19 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     @IBOutlet weak var window: NSWindow!
 
+    var statusItem: NSStatusItem!
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
-        // Insert code here to initialize your application
+        
+        let statusBar = NSStatusBar.systemStatusBar()
+        statusItem = statusBar.statusItemWithLength(-1)
+        
+        let icon = NSImage(named: "menu-icon")
+        icon?.setTemplate(true)
+        statusItem.image = icon
+        
     }
 
-    func applicationWillTerminate(aNotification: NSNotification) {
-        // Insert code here to tear down your application
-    }
 
 
 }
