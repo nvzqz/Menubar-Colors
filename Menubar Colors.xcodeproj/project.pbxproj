@@ -8,12 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		24322F341B5C536400871B7F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24322F331B5C536400871B7F /* MainMenu.xib */; };
+		24322F3B1B5C5FB700871B7F /* AboutWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24322F3A1B5C5FB700871B7F /* AboutWindow.swift */; };
+		24322F3D1B5C5FDE00871B7F /* AboutWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24322F3C1B5C5FDE00871B7F /* AboutWindow.xib */; };
+		24322F3F1B5C5FF900871B7F /* AboutWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24322F3E1B5C5FF900871B7F /* AboutWindowController.swift */; };
 		243776431B5C4CF300A178B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243776421B5C4CF300A178B2 /* AppDelegate.swift */; };
 		243776451B5C4CF300A178B2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 243776441B5C4CF300A178B2 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		24322F331B5C536400871B7F /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		24322F3A1B5C5FB700871B7F /* AboutWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutWindow.swift; sourceTree = "<group>"; };
+		24322F3C1B5C5FDE00871B7F /* AboutWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutWindow.xib; sourceTree = "<group>"; };
+		24322F3E1B5C5FF900871B7F /* AboutWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutWindowController.swift; sourceTree = "<group>"; };
 		2437763D1B5C4CF300A178B2 /* Menubar Colors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Menubar Colors.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		243776411B5C4CF300A178B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		243776421B5C4CF300A178B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +50,8 @@
 			isa = PBXGroup;
 			children = (
 				243776421B5C4CF300A178B2 /* AppDelegate.swift */,
+				24322F3A1B5C5FB700871B7F /* AboutWindow.swift */,
+				24322F3E1B5C5FF900871B7F /* AboutWindowController.swift */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -70,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				24322F331B5C536400871B7F /* MainMenu.xib */,
+				24322F3C1B5C5FDE00871B7F /* AboutWindow.xib */,
 			);
 			name = "Interface Builder Files";
 			path = interfaces;
@@ -162,6 +171,7 @@
 			files = (
 				243776451B5C4CF300A178B2 /* Images.xcassets in Resources */,
 				24322F341B5C536400871B7F /* MainMenu.xib in Resources */,
+				24322F3D1B5C5FDE00871B7F /* AboutWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,7 +182,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24322F3F1B5C5FF900871B7F /* AboutWindowController.swift in Sources */,
 				243776431B5C4CF300A178B2 /* AppDelegate.swift in Sources */,
+				24322F3B1B5C5FB700871B7F /* AboutWindow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
