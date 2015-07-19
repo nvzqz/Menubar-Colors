@@ -10,18 +10,7 @@
 		243776431B5C4CF300A178B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243776421B5C4CF300A178B2 /* AppDelegate.swift */; };
 		243776451B5C4CF300A178B2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 243776441B5C4CF300A178B2 /* Images.xcassets */; };
 		243776481B5C4CF300A178B2 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 243776461B5C4CF300A178B2 /* MainMenu.xib */; };
-		243776541B5C4CF300A178B2 /* Menubar_ColorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243776531B5C4CF300A178B2 /* Menubar_ColorsTests.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		2437764E1B5C4CF300A178B2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 243776351B5C4CF300A178B2 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2437763C1B5C4CF300A178B2;
-			remoteInfo = "Menubar Colors";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		2437763D1B5C4CF300A178B2 /* Menubar Colors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Menubar Colors.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -29,20 +18,10 @@
 		243776421B5C4CF300A178B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		243776441B5C4CF300A178B2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		243776471B5C4CF300A178B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		2437764D1B5C4CF300A178B2 /* Menubar ColorsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Menubar ColorsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		243776521B5C4CF300A178B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		243776531B5C4CF300A178B2 /* Menubar_ColorsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menubar_ColorsTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		2437763A1B5C4CF300A178B2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2437764A1B5C4CF300A178B2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -56,7 +35,6 @@
 			isa = PBXGroup;
 			children = (
 				2437763F1B5C4CF300A178B2 /* Menubar Colors */,
-				243776501B5C4CF300A178B2 /* Menubar ColorsTests */,
 				2437763E1B5C4CF300A178B2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,7 +43,6 @@
 			isa = PBXGroup;
 			children = (
 				2437763D1B5C4CF300A178B2 /* Menubar Colors.app */,
-				2437764D1B5C4CF300A178B2 /* Menubar ColorsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -85,23 +62,6 @@
 			isa = PBXGroup;
 			children = (
 				243776411B5C4CF300A178B2 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		243776501B5C4CF300A178B2 /* Menubar ColorsTests */ = {
-			isa = PBXGroup;
-			children = (
-				243776531B5C4CF300A178B2 /* Menubar_ColorsTests.swift */,
-				243776511B5C4CF300A178B2 /* Supporting Files */,
-			);
-			path = "Menubar ColorsTests";
-			sourceTree = "<group>";
-		};
-		243776511B5C4CF300A178B2 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				243776521B5C4CF300A178B2 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -126,24 +86,6 @@
 			productReference = 2437763D1B5C4CF300A178B2 /* Menubar Colors.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2437764C1B5C4CF300A178B2 /* Menubar ColorsTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2437765A1B5C4CF300A178B2 /* Build configuration list for PBXNativeTarget "Menubar ColorsTests" */;
-			buildPhases = (
-				243776491B5C4CF300A178B2 /* Sources */,
-				2437764A1B5C4CF300A178B2 /* Frameworks */,
-				2437764B1B5C4CF300A178B2 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				2437764F1B5C4CF300A178B2 /* PBXTargetDependency */,
-			);
-			name = "Menubar ColorsTests";
-			productName = "Menubar ColorsTests";
-			productReference = 2437764D1B5C4CF300A178B2 /* Menubar ColorsTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -155,10 +97,6 @@
 				TargetAttributes = {
 					2437763C1B5C4CF300A178B2 = {
 						CreatedOnToolsVersion = 6.4;
-					};
-					2437764C1B5C4CF300A178B2 = {
-						CreatedOnToolsVersion = 6.4;
-						TestTargetID = 2437763C1B5C4CF300A178B2;
 					};
 				};
 			};
@@ -176,7 +114,6 @@
 			projectRoot = "";
 			targets = (
 				2437763C1B5C4CF300A178B2 /* Menubar Colors */,
-				2437764C1B5C4CF300A178B2 /* Menubar ColorsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -191,13 +128,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2437764B1B5C4CF300A178B2 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -209,23 +139,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		243776491B5C4CF300A178B2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				243776541B5C4CF300A178B2 /* Menubar_ColorsTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		2437764F1B5C4CF300A178B2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2437763C1B5C4CF300A178B2 /* Menubar Colors */;
-			targetProxy = 2437764E1B5C4CF300A178B2 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		243776461B5C4CF300A178B2 /* MainMenu.xib */ = {
@@ -341,42 +255,6 @@
 			};
 			name = Release;
 		};
-		2437765B1B5C4CF300A178B2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "Menubar ColorsTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Menubar Colors.app/Contents/MacOS/Menubar Colors";
-			};
-			name = Debug;
-		};
-		2437765C1B5C4CF300A178B2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "Menubar ColorsTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Menubar Colors.app/Contents/MacOS/Menubar Colors";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -396,14 +274,7 @@
 				243776591B5C4CF300A178B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		2437765A1B5C4CF300A178B2 /* Build configuration list for PBXNativeTarget "Menubar ColorsTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2437765B1B5C4CF300A178B2 /* Debug */,
-				2437765C1B5C4CF300A178B2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
