@@ -32,6 +32,9 @@
                 <menuItem isSeparatorItem="YES" id="agR-Eq-SD1"/>
                 <menuItem title="About" id="hQ5-i7-sRm">
                     <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="showAbout:" target="Voe-Tx-rLC" id="eA9-hw-r6P"/>
+                    </connections>
                 </menuItem>
                 <menuItem title="Quit" keyEquivalent="q" id="ge2-nI-E4N">
                     <connections>

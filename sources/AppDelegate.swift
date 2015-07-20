@@ -37,6 +37,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     var statusItem: NSStatusItem!
     
+    // MARK: NSWindow-Related Variables
+    
+    let aboutWindowController: AboutWindowController = AboutWindowController(windowNibName: "AboutWindow")
+    
     // MARK: NSApplicationDelegate Methods
     
     func applicationDidFinishLaunching(aNotification: NSNotification) {
@@ -71,6 +75,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 
             }
         }
+    }
+    
+    // MARK: IB Methods
+    
+    @IBAction func showAbout(sender: AnyObject?) {
+        aboutWindowController.showWindow(sender)
     }
 
 }
