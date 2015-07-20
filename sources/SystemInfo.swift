@@ -28,11 +28,11 @@ import Cocoa
 
 struct SystemInfo {
     
-    static var screenBounds: NSRect {
+    static var ScreenBounds: NSRect {
         return NSScreen.mainScreen()!.visibleFrame
     }
     
-    static var screenSize: NSRect {
+    static var ScreenSize: NSRect {
         return NSScreen.mainScreen()!.frame
     }
     
