@@ -19,6 +19,7 @@
 		24F675471B5C908F00E9C52E /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F675461B5C908F00E9C52E /* Location.swift */; };
 		24F675491B5C912500E9C52E /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F675481B5C912500E9C52E /* Preferences.swift */; };
 		24F675501B5CBB3900E9C52E /* AppSupportHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F6754F1B5CBB3900E9C52E /* AppSupportHandler.swift */; };
+		24F675521B5CCBA000E9C52E /* LoginItemsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F675511B5CCBA000E9C52E /* LoginItemsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		24F675461B5C908F00E9C52E /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		24F675481B5C912500E9C52E /* Preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		24F6754F1B5CBB3900E9C52E /* AppSupportHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSupportHandler.swift; sourceTree = "<group>"; };
+		24F675511B5CCBA000E9C52E /* LoginItemsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginItemsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 				24F675481B5C912500E9C52E /* Preferences.swift */,
 				24F675371B5C887C00E9C52E /* SystemInfo.swift */,
 				24F675401B5C8F4400E9C52E /* AppInfo.swift */,
+				24F675511B5CCBA000E9C52E /* LoginItemsManager.swift */,
 			);
 			name = Global;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24F675521B5CCBA000E9C52E /* LoginItemsManager.swift in Sources */,
 				24322F3F1B5C5FF900871B7F /* AboutWindowController.swift in Sources */,
 				243776431B5C4CF300A178B2 /* AppDelegate.swift in Sources */,
 				24F675311B5C77AA00E9C52E /* StatusMenu.swift in Sources */,
