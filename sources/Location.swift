@@ -29,27 +29,27 @@ import Foundation
 enum Location: Printable {
     
     static let CasesDictionary: [String : Location] = [
-        None.stringValue     : None,
         TopLeft.stringValue  : TopLeft,
-        TopRight.stringValue : TopRight
+        TopRight.stringValue : TopRight,
+        None.stringValue     : None
     ]
     
     static let CasesArray: [Location] = [
-        .None,
         .TopLeft,
-        .TopRight
+        .TopRight,
+        .None
     ]
     
-    case None, TopLeft, TopRight
+    case TopLeft, TopRight, None
     
     var stringValue: String {
         switch self {
-        case .None:
-            return "None"
         case .TopLeft:
             return "Top Left"
         case .TopRight:
             return "Top Right"
+        case .None:
+            return "None"
         }
     }
     
