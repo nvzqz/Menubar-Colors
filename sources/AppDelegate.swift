@@ -27,7 +27,7 @@
 import Cocoa
 
 @NSApplicationMain
-class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
+class AppDelegate: NSObject, NSApplicationDelegate {
 
     @IBOutlet weak var statusMenu: StatusMenu!
     
@@ -64,6 +64,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
             }
         }
     }
+
+}
+
+extension AppDelegate: NSMenuDelegate {
 
     func menuDidClose(menu: NSMenu) {
         statusItem.menu = nil
