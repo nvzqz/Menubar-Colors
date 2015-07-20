@@ -28,4 +28,12 @@ import Foundation
 
 struct AppInfo {
     
+    static var AppName: String {
+        if let appName = NSBundle.mainBundle().infoDictionary!["CFBundleName"] as? String {
+            return appName
+        } else {
+            return "Menubar Colors"
+        }
+    }
+    
 }
