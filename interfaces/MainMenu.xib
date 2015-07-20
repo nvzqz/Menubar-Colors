@@ -13,10 +13,31 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Menubar_Colors" customModuleProvider="target">
             <connections>
+                <outlet property="statusMenu" destination="mXv-DX-wa1" id="mPP-rf-gSF"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+        <menu title="Status Menu" id="mXv-DX-wa1" userLabel="Status Menu" customClass="StatusMenu" customModule="Menubar_Colors" customModuleProvider="target">
+            <items>
+                <menuItem title="Colors" id="09I-BA-cdi">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="cob-Fh-ANa"/>
+                <menuItem title="Reset Position" id="elj-jc-U5f">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem title="Start at Login" id="bRJ-Wx-gwp">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="agR-Eq-SD1"/>
+                <menuItem title="About" id="hQ5-i7-sRm">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem title="Quit" keyEquivalent="q" id="ge2-nI-E4N"/>
+            </items>
+            <point key="canvasLocation" x="104.5" y="247.5"/>
+        </menu>
         <menu title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
             <items>
                 <menuItem title="Menubar Colors" id="1Xt-HY-uBw">
