@@ -29,6 +29,7 @@
                 <menuItem isSeparatorItem="YES" id="cob-Fh-ANa"/>
                 <menuItem title="Reset Position" id="elj-jc-U5f">
                     <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" id="rXf-ue-fDz"/>
                 </menuItem>
                 <menuItem title="Start at Login" id="bRJ-Wx-gwp">
                     <modifierMask key="keyEquivalentModifierMask"/>
@@ -50,6 +51,7 @@
                 </menuItem>
             </items>
             <connections>
+                <outlet property="resetPositionMenu" destination="rXf-ue-fDz" id="bkl-d2-uiu"/>
                 <outlet property="toggleColorsItem" destination="09I-BA-cdi" id="a5i-hG-kgW"/>
             </connections>
             <point key="canvasLocation" x="104.5" y="247.5"/>

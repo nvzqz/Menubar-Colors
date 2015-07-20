@@ -30,4 +30,6 @@ class StatusMenu: NSMenu {
 
     @IBOutlet weak var toggleColorsItem: NSMenuItem!
 
+    @IBOutlet weak var resetPositionMenu: NSMenu!
+
 }
