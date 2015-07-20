@@ -35,6 +35,8 @@ class AboutWindow: NSWindow {
         
         self.collectionBehavior = self.collectionBehavior | NSWindowCollectionBehavior.MoveToActiveSpace
         
+        self.level = Int(CGWindowLevelKey((kCGModalPanelWindowLevelKey)))
+        
         self.titlebarAppearsTransparent = true
         self.titleVisibility = .Hidden
         
