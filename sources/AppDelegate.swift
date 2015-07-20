@@ -59,6 +59,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         statusMenu.delegate = self
         
+        colorPanel.hidesOnDeactivate = false
+        
     }
     
     // MARK: Selector Methods
