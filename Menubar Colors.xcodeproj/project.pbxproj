@@ -14,6 +14,7 @@
 		243776431B5C4CF300A178B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243776421B5C4CF300A178B2 /* AppDelegate.swift */; };
 		243776451B5C4CF300A178B2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 243776441B5C4CF300A178B2 /* Images.xcassets */; };
 		24F675311B5C77AA00E9C52E /* StatusMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F675301B5C77AA00E9C52E /* StatusMenu.swift */; };
+		24F675381B5C887C00E9C52E /* SystemInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F675371B5C887C00E9C52E /* SystemInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		243776421B5C4CF300A178B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		243776441B5C4CF300A178B2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		24F675301B5C77AA00E9C52E /* StatusMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusMenu.swift; sourceTree = "<group>"; };
+		24F675371B5C887C00E9C52E /* SystemInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +45,7 @@
 			isa = PBXGroup;
 			children = (
 				24322F361B5C5A5E00871B7F /* Main */,
+				24F675361B5C886C00E9C52E /* Global */,
 			);
 			name = Sources;
 			path = sources;
@@ -113,6 +116,14 @@
 			);
 			name = "Supporting Files";
 			path = "Menubar Colors";
+			sourceTree = "<group>";
+		};
+		24F675361B5C886C00E9C52E /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				24F675371B5C887C00E9C52E /* SystemInfo.swift */,
+			);
+			name = Global;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,6 +199,7 @@
 				24322F3F1B5C5FF900871B7F /* AboutWindowController.swift in Sources */,
 				243776431B5C4CF300A178B2 /* AppDelegate.swift in Sources */,
 				24F675311B5C77AA00E9C52E /* StatusMenu.swift in Sources */,
+				24F675381B5C887C00E9C52E /* SystemInfo.swift in Sources */,
 				24322F3B1B5C5FB700871B7F /* AboutWindow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
