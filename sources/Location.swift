@@ -26,7 +26,7 @@
 
 import Foundation
 
-enum Location {
+enum Location: Printable {
     
     static let Cases: [String: Location] = [
         None.stringValue     : None,
@@ -45,6 +45,10 @@ enum Location {
         case .TopRight:
             return "TopRight"
         }
+    }
+    
+    var description: String {
+        return self.stringValue
     }
     
 }
