@@ -42,6 +42,24 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         icon?.setTemplate(true)
         statusItem.image = icon
         
+        let button = statusItem.button
+        button?.toolTip = "Click to show color panel\nRight click to show menu"
+        button?.target = self
+        button?.action = "statusButtonPressed:"
+        button?.sendActionOn(Int((NSEventMask.LeftMouseUpMask | NSEventMask.RightMouseUpMask).rawValue))
+        
+    }
+    
+    func statusButtonPressed(sender: NSStatusBarButton) {
+        if let event = NSApplication.sharedApplication().currentEvent {
+            if (event.modifierFlags & NSEventModifierFlags.ControlKeyMask).rawValue != 0 || event.type == .RightMouseUp {
+                //  Handle right mouse click
+                
+            } else {
+                //  Handle left mouse click
+                
+            }
+        }
     }
 
 
