@@ -79,6 +79,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     // MARK: IB Methods
     
+    @IBAction func toggleStartAtLogin(sender: AnyObject) {
+        let manager = LoginItemsManager()
+        manager.toggleStartAtLogin()
+    }
+    
     @IBAction func showAbout(sender: AnyObject?) {
         aboutWindowController.showWindow(sender)
     }
@@ -93,6 +98,19 @@ extension AppDelegate: NSMenuDelegate {
 
     func menuDidClose(menu: NSMenu) {
         statusItem.menu = nil
+    }
+    
+    func menuWillOpen(menu: NSMenu) {
+        if let statusMenu = menu as? StatusMenu {
+            if let startAtLoginItem = statusMenu.itemWithTitle("Start at Login") {
+                let manager = LoginItemsManager()
+                if manager.startAtLogin {
+                    startAtLoginItem.state = NSOnState
+                } else {
+                    startAtLoginItem.state = NSOffState
+                }
+            }
+        }
     }
 
 }
