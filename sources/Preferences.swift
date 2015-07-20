@@ -29,6 +29,7 @@
 
 import Foundation
 
+//  Mark: Preferences Class
 class Preferences {
     
     // MARK: Private Variables

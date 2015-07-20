@@ -27,6 +27,8 @@
 import Cocoa
 
 @NSApplicationMain
+
+// - MARK: AppDelegate Class
 class AppDelegate: NSObject, NSApplicationDelegate {
     
     // MARK: Status Variables
@@ -72,6 +74,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
 }
+
+// MARK: - NSMenuDelegate Extension
 
 extension AppDelegate: NSMenuDelegate {
     
