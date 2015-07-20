@@ -28,6 +28,12 @@ import Foundation
 
 enum Location {
     
+    static let Cases: [String: Location] = [
+        None.stringValue     : None,
+        TopLeft.stringValue  : TopLeft,
+        TopRight.stringValue : TopRight
+    ]
+    
     case None, TopLeft, TopRight
     
     var stringValue: String {
