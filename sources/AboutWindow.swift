@@ -27,5 +27,29 @@
 import Cocoa
 
 class AboutWindow: NSWindow {
+    
+    @IBOutlet weak var versionLabel: NSTextField!
+    @IBOutlet weak var copyrightLabel: NSTextField!
+    
+    override func awakeFromNib() {
+        
+        self.titlebarAppearsTransparent = true
+        self.titleVisibility = .Hidden
+        
+        self.movableByWindowBackground = true
+        
+        if let view = self.contentView as? NSView {
+            view.wantsLayer = true
+            view.layer?.backgroundColor = NSColor.whiteColor().CGColor
+        }
+        
+        versionLabel.stringValue = AppInfo.FormattedVersion
+        copyrightLabel.stringValue = AppInfo.Copyright!
+        
+    }
+    
+    override func cancelOperation(sender: AnyObject?) {
+        self.performClose(sender)
+    }
 
 }
