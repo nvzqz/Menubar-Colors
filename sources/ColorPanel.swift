@@ -54,10 +54,8 @@ class ColorPanel: NSColorPanel {
         self.setFrameTopLeftPoint(newTopLeftPoint)
     }
     
-    // MARK: IB Methods
-    
-    @IBAction func open(sender: AnyObject?) {
-        switch Preferences.sharedPreferences.resetLocation {
+    func moveToScreenLocation(location: Location) {
+        switch location {
         case .TopLeft:
             self.moveToScreenTopLeft()
         case .TopRight:
@@ -65,6 +63,13 @@ class ColorPanel: NSColorPanel {
         case .None:
             break
         }
+    }
+    
+    // MARK: IB Methods
+    
+    @IBAction func open(sender: AnyObject?) {
+        let location = Preferences.sharedPreferences.resetLocation
+        self.moveToScreenLocation(location)
         self.makeKeyAndOrderFront(sender)
     }
 
