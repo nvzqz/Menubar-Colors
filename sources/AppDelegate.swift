@@ -29,7 +29,6 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
 
-    @IBOutlet weak var window: NSWindow!
     @IBOutlet weak var statusMenu: StatusMenu!
     
     var statusItem: NSStatusItem!
