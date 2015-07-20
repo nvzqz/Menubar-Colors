@@ -61,6 +61,22 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         colorPanel.hidesOnDeactivate = false
         
+        // MARK: Populate "Reset Location" menu
+        
+        let menu: NSMenu = statusMenu.resetPositionMenu
+        
+        for location in Location.CasesArray {
+            let item = NSMenuItem(
+                title: location.description,
+                action: "setResetLocation:",
+                keyEquivalent: ""
+            )
+            if location == Preferences.sharedPreferences.resetLocation {
+                item.state = NSOnState
+            }
+            menu.addItem(item)
+        }
+        
     }
     
     // MARK: Selector Methods
@@ -75,6 +91,24 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 // Handle left mouse click
                 self.toggleColorPanel(sender)
             }
+        }
+    }
+    
+    func setResetLocation(sender: NSMenuItem) {
+        if let location = Location.CasesDictionary[sender.title] {
+            
+            colorPanel.moveToScreenLocation(location)
+            Preferences.sharedPreferences.resetLocation = location
+            Preferences.sharedPreferences.write(AppSupportHandler.SharedHandler.preferencesFile)
+            
+            if sender.action == "setResetLocation:" {
+                for item in sender.menu?.itemArray as! [NSMenuItem] {
+                    if item.action == sender.action {
+                        item.state = (item == sender) ? NSOnState : NSOffState
+                    }
+                }
+            }
+            
         }
     }
     
