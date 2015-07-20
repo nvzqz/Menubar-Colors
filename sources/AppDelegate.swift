@@ -96,10 +96,6 @@ extension AppDelegate: NSMenuDelegate {
     
     // MARK: NSMenuDelegate Methods
 
-    func menuDidClose(menu: NSMenu) {
-        statusItem.menu = nil
-    }
-    
     func menuWillOpen(menu: NSMenu) {
         if let statusMenu = menu as? StatusMenu {
             if let startAtLoginItem = statusMenu.itemWithTitle("Start at Login") {
@@ -111,6 +107,10 @@ extension AppDelegate: NSMenuDelegate {
                 }
             }
         }
+    }
+    
+    func menuDidClose(menu: NSMenu) {
+        statusItem.menu = nil
     }
 
 }
