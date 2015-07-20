@@ -16,6 +16,7 @@
 		24F675311B5C77AA00E9C52E /* StatusMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F675301B5C77AA00E9C52E /* StatusMenu.swift */; };
 		24F675381B5C887C00E9C52E /* SystemInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F675371B5C887C00E9C52E /* SystemInfo.swift */; };
 		24F675411B5C8F4400E9C52E /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F675401B5C8F4400E9C52E /* AppInfo.swift */; };
+		24F675471B5C908F00E9C52E /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F675461B5C908F00E9C52E /* Location.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		24F675301B5C77AA00E9C52E /* StatusMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusMenu.swift; sourceTree = "<group>"; };
 		24F675371B5C887C00E9C52E /* SystemInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemInfo.swift; sourceTree = "<group>"; };
 		24F675401B5C8F4400E9C52E /* AppInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
+		24F675461B5C908F00E9C52E /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +50,7 @@
 			children = (
 				24322F361B5C5A5E00871B7F /* Main */,
 				24F675361B5C886C00E9C52E /* Global */,
+				24F675451B5C907700E9C52E /* Data Structures */,
 			);
 			name = Sources;
 			path = sources;
@@ -129,6 +132,14 @@
 			name = Global;
 			sourceTree = "<group>";
 		};
+		24F675451B5C907700E9C52E /* Data Structures */ = {
+			isa = PBXGroup;
+			children = (
+				24F675461B5C908F00E9C52E /* Location.swift */,
+			);
+			name = "Data Structures";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -205,6 +216,7 @@
 				24F675381B5C887C00E9C52E /* SystemInfo.swift in Sources */,
 				24322F3B1B5C5FB700871B7F /* AboutWindow.swift in Sources */,
 				24F675411B5C8F4400E9C52E /* AppInfo.swift in Sources */,
+				24F675471B5C908F00E9C52E /* Location.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
