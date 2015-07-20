@@ -28,4 +28,6 @@ import Cocoa
 
 class StatusMenu: NSMenu {
 
+    @IBOutlet weak var toggleColorsItem: NSMenuItem!
+
 }

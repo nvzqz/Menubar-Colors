@@ -31,13 +31,12 @@ import Cocoa
 // - MARK: AppDelegate Class
 class AppDelegate: NSObject, NSApplicationDelegate {
     
-    // MARK: Status Variables
+    // MARK: Variables
+    
+    @IBOutlet weak var colorPanel: ColorPanel!
 
     @IBOutlet weak var statusMenu: StatusMenu!
-    
     var statusItem: NSStatusItem!
-    
-    // MARK: NSWindow-Related Variables
     
     let aboutWindowController: AboutWindowController = AboutWindowController(windowNibName: "AboutWindow")
     
@@ -79,6 +78,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     // MARK: IB Methods
     
+    @IBAction func toggleColorPanel(sender: AnyObject) {
+        if colorPanel.visible {
+            colorPanel.close()
+        } else {
+            colorPanel.open(sender)
+        }
+    }
+    
     @IBAction func toggleStartAtLogin(sender: AnyObject) {
         let manager = LoginItemsManager()
         manager.toggleStartAtLogin()
@@ -98,6 +105,7 @@ extension AppDelegate: NSMenuDelegate {
 
     func menuWillOpen(menu: NSMenu) {
         if let statusMenu = menu as? StatusMenu {
+            
             if let startAtLoginItem = statusMenu.itemWithTitle("Start at Login") {
                 let manager = LoginItemsManager()
                 if manager.startAtLogin {
@@ -106,6 +114,13 @@ extension AppDelegate: NSMenuDelegate {
                     startAtLoginItem.state = NSOffState
                 }
             }
+            
+            if colorPanel.visible {
+                statusMenu.toggleColorsItem.title = "Hide Colors"
+            } else {
+                statusMenu.toggleColorsItem.title = "Show Colors"
+            }
+            
         }
     }
     

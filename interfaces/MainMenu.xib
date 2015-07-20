@@ -13,13 +13,18 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Menubar_Colors" customModuleProvider="target">
             <connections>
+                <outlet property="colorPanel" destination="iHg-ud-7kT" id="tub-Kt-cKC"/>
                 <outlet property="statusMenu" destination="mXv-DX-wa1" id="mPP-rf-gSF"/>
             </connections>
         </customObject>
+        <customObject id="iHg-ud-7kT" customClass="ColorPanel" customModule="Menubar_Colors" customModuleProvider="target"/>
         <menu title="Status Menu" id="mXv-DX-wa1" userLabel="Status Menu" customClass="StatusMenu" customModule="Menubar_Colors" customModuleProvider="target">
             <items>
-                <menuItem title="Colors" id="09I-BA-cdi">
+                <menuItem title="Show Colors" id="09I-BA-cdi">
                     <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="toggleColorPanel:" target="Voe-Tx-rLC" id="0z7-7G-Gzd"/>
+                    </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="cob-Fh-ANa"/>
                 <menuItem title="Reset Position" id="elj-jc-U5f">
@@ -44,6 +49,9 @@
                     </connections>
                 </menuItem>
             </items>
+            <connections>
+                <outlet property="toggleColorsItem" destination="09I-BA-cdi" id="a5i-hG-kgW"/>
+            </connections>
             <point key="canvasLocation" x="104.5" y="247.5"/>
         </menu>
         <menu title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
