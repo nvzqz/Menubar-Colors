@@ -33,6 +33,8 @@ class AboutWindow: NSWindow {
     
     override func awakeFromNib() {
         
+        self.collectionBehavior = self.collectionBehavior | NSWindowCollectionBehavior.MoveToActiveSpace
+        
         self.titlebarAppearsTransparent = true
         self.titleVisibility = .Hidden
         
