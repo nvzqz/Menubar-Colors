@@ -28,7 +28,7 @@ import Foundation
 
 enum Location: Printable {
     
-    static let Cases: [String: Location] = [
+    static let CasesDictionary: [String : Location] = [
         None.stringValue     : None,
         TopLeft.stringValue  : TopLeft,
         TopRight.stringValue : TopRight

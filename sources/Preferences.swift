@@ -47,7 +47,7 @@ class Preferences {
     var resetLocation: Location {
         get {
             if let resetLocation: String = dictionary[Keys.ResetLocation] as? String {
-                if let location: Location = Location.Cases[resetLocation] {
+                if let location: Location = Location.CasesDictionary[resetLocation] {
                     return location
                 }
             }
