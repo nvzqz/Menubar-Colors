@@ -69,7 +69,31 @@ class Preferences {
     // MARK: Methods
     
     func write(path: String) -> Bool {
-        return dictionary.writeToFile(path, atomically: true)
+        
+        func write() -> Bool {
+            return dictionary.writeToFile(path, atomically: true)
+        }
+        
+        let parentDir = path.stringByDeletingLastPathComponent
+        let fileManager = NSFileManager.defaultManager()
+        var isDir: ObjCBool = false
+        
+        if fileManager.fileExistsAtPath(parentDir, isDirectory: &isDir) {
+            if isDir {
+                return write()
+            } else {
+                fileManager.removeItemAtPath(parentDir, error: nil)
+            }
+        }
+        
+        fileManager.createDirectoryAtPath(
+            parentDir,
+            withIntermediateDirectories: false,
+            attributes: nil,
+            error: nil
+        )
+        
+        return write()
     }
     
 }
