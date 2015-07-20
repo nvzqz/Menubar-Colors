@@ -38,26 +38,32 @@ class ColorPanel: NSColorPanel {
     
     func moveToScreenLocation(location: Location) {
         
-        func newTopLeftPoint() -> NSPoint? {
+        func newFrameOrigin() -> NSPoint? {
             let screenBounds = SystemInfo.ScreenBounds
             switch location {
             case .TopLeft:
                 return NSMakePoint(
                     screenBounds.minX + framePadding,
-                    screenBounds.maxY - framePadding
+                    screenBounds.maxY - framePadding - frame.height
                 )
             case .TopRight:
                 return NSMakePoint(
                     screenBounds.maxX - frame.width - framePadding,
-                    screenBounds.maxY - framePadding
+                    screenBounds.maxY - framePadding - frame.height
                 )
             case .None:
                 return nil
             }
         }
         
-        if let point = newTopLeftPoint() {
-            self.setFrameTopLeftPoint(point)
+        if let newOrigin = newFrameOrigin() {
+            let newFrame = NSMakeRect(
+                newOrigin.x,
+                newOrigin.y,
+                self.frame.width,
+                self.frame.height
+            )
+            self.setFrame(newFrame, display: self.visible, animate: self.visible)
         }
         
     }
