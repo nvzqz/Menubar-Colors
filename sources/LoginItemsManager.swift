@@ -39,6 +39,14 @@ class LoginItemsManager {
         }
     }
     
+    private var loginItemsReference: LSSharedFileListRef? {
+        return LSSharedFileListCreate(
+            nil,
+            kLSSharedFileListSessionLoginItems.takeRetainedValue(),
+            nil
+            ).takeRetainedValue() as LSSharedFileListRef?
+    }
+    
     // MARK: Initialization
     
     init() {}
@@ -49,17 +57,9 @@ class LoginItemsManager {
         startAtLogin = !startAtLogin
     }
 
-    private func loginItemsReference() -> LSSharedFileListRef? {
-        return LSSharedFileListCreate(
-            nil,
-            kLSSharedFileListSessionLoginItems.takeRetainedValue(),
-            nil
-            ).takeRetainedValue() as LSSharedFileListRef?
-    }
-
     private func makeLoginItem(shouldBeLoginItem: Bool) {
         let itemReferences = itemReferencesInLoginItems()
-        if let loginItemsRef = loginItemsReference() {
+        if let loginItemsRef = loginItemsReference {
             if shouldBeLoginItem {
                 let bundleURL: NSURL = NSBundle.mainBundle().bundleURL
                 LSSharedFileListInsertItemURL(loginItemsRef, itemReferences.lastItemReference, nil, nil, bundleURL, nil, nil)
@@ -73,7 +73,7 @@ class LoginItemsManager {
 
     private func itemReferencesInLoginItems() -> (thisReference: LSSharedFileListItemRef?, lastItemReference: LSSharedFileListItemRef?) {
         let bundleURL: NSURL = NSBundle.mainBundle().bundleURL
-        if let loginItemsRef = loginItemsReference() {
+        if let loginItemsRef = loginItemsReference {
             let loginItems: NSArray = LSSharedFileListCopySnapshot(loginItemsRef, nil).takeRetainedValue() as NSArray
             if loginItems.count > 0 {
                 let lastItemReference: LSSharedFileListItemRef = loginItems.lastObject as! LSSharedFileListItemRef
