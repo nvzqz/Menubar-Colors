@@ -14,14 +14,14 @@
         <window allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="QvC-M9-y7g" customClass="AboutWindow" customModule="Menubar_Colors" customModuleProvider="target">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" fullSizeContentView="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="196" y="240" width="189" height="227"/>
+            <rect key="contentRect" x="196" y="240" width="189" height="224"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
             <view key="contentView" id="EiT-Mj-1SZ">
-                <rect key="frame" x="0.0" y="1" width="189" height="227"/>
+                <rect key="frame" x="0.0" y="0.0" width="189" height="224"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h4M-C2-Z5L">
-                        <rect key="frame" x="47" y="115" width="96" height="96"/>
+                        <rect key="frame" x="47" y="112" width="96" height="96"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="96" id="bWW-OG-c40"/>
                             <constraint firstAttribute="width" constant="96" id="pna-Yh-hCd"/>
@@ -29,7 +29,7 @@
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSApplicationIcon" id="4m9-Ab-ENA"/>
                     </imageView>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Tr6-0x-Jn4">
-                        <rect key="frame" x="70" y="75" width="50" height="17"/>
+                        <rect key="frame" x="70" y="72" width="50" height="17"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" title="Version" id="jyd-aH-0pn">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -37,7 +37,7 @@
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="opE-Gs-g9k">
-                        <rect key="frame" x="29" y="92" width="131" height="19"/>
+                        <rect key="frame" x="29" y="89" width="131" height="19"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" title="Menubar Colors" id="Kx5-sF-Zjp">
                             <font key="font" metaFont="systemBold" size="16"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -45,7 +45,7 @@
                         </textFieldCell>
                     </textField>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XCa-bY-gqq">
-                        <rect key="frame" x="11" y="35" width="167" height="32"/>
+                        <rect key="frame" x="11" y="32" width="167" height="32"/>
                         <buttonCell key="cell" type="push" title="GitHub Project Page" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Mfa-eD-WGx">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -54,9 +54,12 @@
                             <action selector="openProjectURL:" target="cT2-Xy-mlc" id="IUU-bj-hWx"/>
                         </connections>
                     </button>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" alphaValue="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="u6X-th-DUS">
-                        <rect key="frame" x="71" y="16" width="48" height="11"/>
-                        <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" title="Copyright" id="Aio-fb-aEt">
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" alphaValue="0.5" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u6X-th-DUS">
+                        <rect key="frame" x="13" y="16" width="164" height="11"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="160" id="aEk-rD-BAb"/>
+                        </constraints>
+                        <textFieldCell key="cell" controlSize="mini" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="center" title="Copyright" id="Aio-fb-aEt">
                             <font key="font" metaFont="miniSystem"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -81,6 +84,7 @@
                     <constraint firstAttribute="centerX" secondItem="XCa-bY-gqq" secondAttribute="centerX" id="ffR-TK-gvH"/>
                     <constraint firstItem="h4M-C2-Z5L" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="24" id="hgQ-EY-ZTM"/>
                     <constraint firstItem="XCa-bY-gqq" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="16" id="o9x-xk-YAb"/>
+                    <constraint firstItem="u6X-th-DUS" firstAttribute="top" secondItem="XCa-bY-gqq" secondAttribute="bottom" constant="12" id="pfz-oh-GKv"/>
                     <constraint firstItem="u6X-th-DUS" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="12" id="psy-Dn-swW"/>
                     <constraint firstItem="opE-Gs-g9k" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="24" id="rMa-9S-qvZ"/>
                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="u6X-th-DUS" secondAttribute="trailing" constant="12" id="yk0-np-rQB"/>
