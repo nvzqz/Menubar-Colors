@@ -130,6 +130,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBAction func showAbout(sender: AnyObject?) {
         aboutWindowController.showWindow(sender)
     }
+    
+    @IBAction func openProjectURL(sender: AnyObject?) {
+        NSWorkspace.sharedWorkspace().openURL(NSURL(string: "https://github.com/nvzqz/Menubar-Colors")!)
+    }
 
 }
 
