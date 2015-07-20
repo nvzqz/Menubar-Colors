@@ -30,4 +30,15 @@ enum Location {
     
     case None, TopLeft, TopRight
     
+    var stringValue: String {
+        switch self {
+        case .None:
+            return "None"
+        case .TopLeft:
+            return "TopLeft"
+        case .TopRight:
+            return "TopRight"
+        }
+    }
+    
 }
