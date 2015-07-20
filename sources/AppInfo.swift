@@ -28,12 +28,30 @@ import Foundation
 
 struct AppInfo {
     
+    private static let BundleInfo = NSBundle.mainBundle().infoDictionary as! Dictionary<String, AnyObject>
+    
     static var AppName: String {
-        if let appName = NSBundle.mainBundle().infoDictionary!["CFBundleName"] as? String {
+        if let appName = BundleInfo["CFBundleName"] as? String {
             return appName
         } else {
             return "Menubar Colors"
         }
+    }
+    
+    static var ShortVersion: String? {
+        return BundleInfo["CFBundleShortVersionString"] as? String
+    }
+    
+    static var Version: String? {
+        return BundleInfo["CFBundleVersion"] as? String
+    }
+    
+    static var FormattedVersion: String {
+        return "Version \(ShortVersion!)"
+    }
+    
+    static var Copyright: String? {
+        return BundleInfo["NSHumanReadableCopyright"] as? String
     }
     
 }
