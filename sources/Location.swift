@@ -34,6 +34,12 @@ enum Location: Printable {
         TopRight.stringValue : TopRight
     ]
     
+    static let CasesArray: [Location] = [
+        .None,
+        .TopLeft,
+        .TopRight
+    ]
+    
     case None, TopLeft, TopRight
     
     var stringValue: String {
