@@ -15,6 +15,7 @@
 		243776451B5C4CF300A178B2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 243776441B5C4CF300A178B2 /* Images.xcassets */; };
 		24F675311B5C77AA00E9C52E /* StatusMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F675301B5C77AA00E9C52E /* StatusMenu.swift */; };
 		24F675381B5C887C00E9C52E /* SystemInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F675371B5C887C00E9C52E /* SystemInfo.swift */; };
+		24F675411B5C8F4400E9C52E /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F675401B5C8F4400E9C52E /* AppInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		243776441B5C4CF300A178B2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		24F675301B5C77AA00E9C52E /* StatusMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusMenu.swift; sourceTree = "<group>"; };
 		24F675371B5C887C00E9C52E /* SystemInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemInfo.swift; sourceTree = "<group>"; };
+		24F675401B5C8F4400E9C52E /* AppInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				24F675371B5C887C00E9C52E /* SystemInfo.swift */,
+				24F675401B5C8F4400E9C52E /* AppInfo.swift */,
 			);
 			name = Global;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 				24F675311B5C77AA00E9C52E /* StatusMenu.swift in Sources */,
 				24F675381B5C887C00E9C52E /* SystemInfo.swift in Sources */,
 				24322F3B1B5C5FB700871B7F /* AboutWindow.swift in Sources */,
+				24F675411B5C8F4400E9C52E /* AppInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
