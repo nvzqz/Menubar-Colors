@@ -50,6 +50,9 @@
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
+                        <connections>
+                            <action selector="openProjectURL:" target="cT2-Xy-mlc" id="IUU-bj-hWx"/>
+                        </connections>
                     </button>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" alphaValue="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="u6X-th-DUS">
                         <rect key="frame" x="71" y="16" width="48" height="11"/>
@@ -89,6 +92,7 @@
             </connections>
             <point key="canvasLocation" x="323.5" y="332.5"/>
         </window>
+        <customObject id="cT2-Xy-mlc" customClass="AppDelegate" customModule="Menubar_Colors" customModuleProvider="target"/>
     </objects>
     <resources>
         <image name="NSApplicationIcon" width="128" height="128"/>
