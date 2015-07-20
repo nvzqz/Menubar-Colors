@@ -47,9 +47,9 @@ enum Location: Printable {
         case .None:
             return "None"
         case .TopLeft:
-            return "TopLeft"
+            return "Top Left"
         case .TopRight:
-            return "TopRight"
+            return "Top Right"
         }
     }
     
