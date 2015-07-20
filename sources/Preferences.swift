@@ -31,11 +31,15 @@ import Foundation
 
 class Preferences {
     
+    // MARK: Private Variables
+    
     private struct Keys {
         static var ResetLocation: String = "Reset Location"
     }
     
     private var dictionary: NSMutableDictionary
+    
+    // MARK: Variables
     
     var resetLocation: Location {
         get {
@@ -50,6 +54,8 @@ class Preferences {
         }
     }
     
+    // MARK: Initialization
+    
     init() {
         dictionary = NSMutableDictionary()
     }
@@ -61,6 +67,8 @@ class Preferences {
             self.dictionary = NSMutableDictionary()
         }
     }
+    
+    // MARK: Methods
     
     func write(path: String) -> Bool {
         return dictionary.writeToFile(path, atomically: true)

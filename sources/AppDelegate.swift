@@ -28,11 +28,15 @@ import Cocoa
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
+    
+    // MARK: Status Variables
 
     @IBOutlet weak var statusMenu: StatusMenu!
     
     var statusItem: NSStatusItem!
-
+    
+    // MARK: NSApplicationDelegate Methods
+    
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         
         let statusBar = NSStatusBar.systemStatusBar()
@@ -52,14 +56,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
     }
     
+    // MARK: Selector Methods
+    
     func statusButtonPressed(sender: NSStatusBarButton) {
         if let event = NSApplication.sharedApplication().currentEvent {
             if (event.modifierFlags & NSEventModifierFlags.ControlKeyMask).rawValue != 0 || event.type == .RightMouseUp {
-                //  Handle right mouse click
+                // Handle right mouse click
                 statusItem.menu = statusMenu
                 statusItem.popUpStatusItemMenu(statusMenu)
             } else {
-                //  Handle left mouse click
+                // Handle left mouse click
                 
             }
         }
@@ -68,6 +74,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 }
 
 extension AppDelegate: NSMenuDelegate {
+    
+    // MARK: NSMenuDelegate Methods
 
     func menuDidClose(menu: NSMenu) {
         statusItem.menu = nil

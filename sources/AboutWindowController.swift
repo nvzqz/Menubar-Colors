@@ -27,6 +27,8 @@
 import Cocoa
 
 class AboutWindowController: NSWindowController {
+    
+    // MARK: Overriden Methods
 
     override func showWindow(sender: AnyObject?) {
         window?.center()
