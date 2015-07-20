@@ -71,7 +71,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 statusItem.popUpStatusItemMenu(statusMenu)
             } else {
                 // Handle left mouse click
-                
+                self.toggleColorPanel(sender)
             }
         }
     }
