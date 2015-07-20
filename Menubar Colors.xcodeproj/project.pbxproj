@@ -128,6 +128,7 @@
 		24F675361B5C886C00E9C52E /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				24F675481B5C912500E9C52E /* Preferences.swift */,
 				24F675371B5C887C00E9C52E /* SystemInfo.swift */,
 				24F675401B5C8F4400E9C52E /* AppInfo.swift */,
 			);
@@ -138,7 +139,6 @@
 			isa = PBXGroup;
 			children = (
 				24F675461B5C908F00E9C52E /* Location.swift */,
-				24F675481B5C912500E9C52E /* Preferences.swift */,
 			);
 			name = "Data Structures";
 			sourceTree = "<group>";
