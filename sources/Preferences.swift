@@ -29,6 +29,11 @@ import Foundation
 //  Mark: Preferences Class
 class Preferences {
     
+    // MARK: Static Constants
+    
+    static let sharedPreferences: Preferences = Preferences(path: AppSupportHandler.SharedHandler.preferencesFile)
+    
+    
     // MARK: Private Variables
     
     private struct Keys {
