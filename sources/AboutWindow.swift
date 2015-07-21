@@ -42,11 +42,6 @@ class AboutWindow: NSWindow {
         
         self.movableByWindowBackground = true
         
-        if let view = self.contentView as? NSView {
-            view.wantsLayer = true
-            view.layer?.backgroundColor = NSColor.whiteColor().CGColor
-        }
-        
         versionLabel.stringValue = AppInfo.FormattedVersion
         copyrightLabel.stringValue = AppInfo.Copyright!
         
