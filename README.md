@@ -1,7 +1,7 @@
 # Menubar Colors
 
 [![OS X Version](http://img.shields.io/badge/OS%20X-10.10%2B-lightgrey.svg)]()
-[![Release Version](https://img.shields.io/badge/release-v1.4.0-blue.svg)]()
+[![Release Version](https://img.shields.io/badge/release-v1.4.1-blue.svg)]()
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)]()
 
 ## What is this?
