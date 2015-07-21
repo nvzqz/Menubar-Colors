@@ -79,7 +79,7 @@ class LoginItemsManager {
                 let lastItemReference: LSSharedFileListItemRef = loginItems.lastObject as! LSSharedFileListItemRef
                 for currentItemReference in loginItems as! [LSSharedFileListItemRef] {
                     let itemURL = LSSharedFileListItemCopyResolvedURL(currentItemReference, 0, nil)
-                    if bundleURL.isEqual(itemURL.takeRetainedValue()) {
+                    if itemURL != nil && bundleURL.isEqual(itemURL.takeRetainedValue()) {
                         return (currentItemReference, lastItemReference)
                     }
                 }
