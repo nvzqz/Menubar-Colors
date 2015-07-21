@@ -13,6 +13,7 @@
 		24322F3F1B5C5FF900871B7F /* AboutWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24322F3E1B5C5FF900871B7F /* AboutWindowController.swift */; };
 		243776431B5C4CF300A178B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243776421B5C4CF300A178B2 /* AppDelegate.swift */; };
 		243776451B5C4CF300A178B2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 243776441B5C4CF300A178B2 /* Images.xcassets */; };
+		24739BCD1B5E01A40019A273 /* NSImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24739BCC1B5E01A40019A273 /* NSImageViewExtension.swift */; };
 		24F675311B5C77AA00E9C52E /* StatusMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F675301B5C77AA00E9C52E /* StatusMenu.swift */; };
 		24F675381B5C887C00E9C52E /* SystemInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F675371B5C887C00E9C52E /* SystemInfo.swift */; };
 		24F675411B5C8F4400E9C52E /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F675401B5C8F4400E9C52E /* AppInfo.swift */; };
@@ -32,6 +33,7 @@
 		243776411B5C4CF300A178B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		243776421B5C4CF300A178B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		243776441B5C4CF300A178B2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		24739BCC1B5E01A40019A273 /* NSImageViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSImageViewExtension.swift; sourceTree = "<group>"; };
 		24F675301B5C77AA00E9C52E /* StatusMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusMenu.swift; sourceTree = "<group>"; };
 		24F675371B5C887C00E9C52E /* SystemInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemInfo.swift; sourceTree = "<group>"; };
 		24F675401B5C8F4400E9C52E /* AppInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 			children = (
 				24322F361B5C5A5E00871B7F /* Main */,
 				24F675361B5C886C00E9C52E /* Global */,
+				24739BCE1B5E02D00019A273 /* Extensions */,
 				24F675451B5C907700E9C52E /* Data Structures */,
 			);
 			name = Sources;
@@ -130,6 +133,14 @@
 			);
 			name = "Supporting Files";
 			path = "Menubar Colors";
+			sourceTree = "<group>";
+		};
+		24739BCE1B5E02D00019A273 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				24739BCC1B5E01A40019A273 /* NSImageViewExtension.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		24F675361B5C886C00E9C52E /* Global */ = {
@@ -232,6 +243,7 @@
 				24322F3B1B5C5FB700871B7F /* AboutWindow.swift in Sources */,
 				24F675411B5C8F4400E9C52E /* AppInfo.swift in Sources */,
 				24F675491B5C912500E9C52E /* Preferences.swift in Sources */,
+				24739BCD1B5E01A40019A273 /* NSImageViewExtension.swift in Sources */,
 				24F675471B5C908F00E9C52E /* Location.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
