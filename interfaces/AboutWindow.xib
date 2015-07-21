@@ -14,22 +14,23 @@
         <window allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="QvC-M9-y7g" customClass="AboutWindow" customModule="Menubar_Colors" customModuleProvider="target">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" fullSizeContentView="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="196" y="240" width="189" height="224"/>
+            <rect key="contentRect" x="196" y="240" width="200" height="256"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+            <value key="minSize" type="size" width="200" height="256"/>
             <view key="contentView" id="EiT-Mj-1SZ">
-                <rect key="frame" x="0.0" y="0.0" width="189" height="224"/>
+                <rect key="frame" x="0.0" y="0.0" width="200" height="256"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h4M-C2-Z5L">
-                        <rect key="frame" x="47" y="112" width="96" height="96"/>
+                        <rect key="frame" x="36" y="112" width="128" height="128"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="96" id="bWW-OG-c40"/>
-                            <constraint firstAttribute="width" constant="96" id="pna-Yh-hCd"/>
+                            <constraint firstAttribute="height" constant="128" id="bWW-OG-c40"/>
+                            <constraint firstAttribute="width" constant="128" id="pna-Yh-hCd"/>
                         </constraints>
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSApplicationIcon" id="4m9-Ab-ENA"/>
                     </imageView>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Tr6-0x-Jn4">
-                        <rect key="frame" x="70" y="72" width="50" height="17"/>
+                        <rect key="frame" x="75" y="72" width="50" height="17"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" title="Version" id="jyd-aH-0pn">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -37,7 +38,7 @@
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="opE-Gs-g9k">
-                        <rect key="frame" x="29" y="89" width="131" height="19"/>
+                        <rect key="frame" x="35" y="89" width="131" height="19"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" title="Menubar Colors" id="Kx5-sF-Zjp">
                             <font key="font" metaFont="systemBold" size="16"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -45,7 +46,7 @@
                         </textFieldCell>
                     </textField>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XCa-bY-gqq">
-                        <rect key="frame" x="11" y="32" width="167" height="32"/>
+                        <rect key="frame" x="17" y="32" width="167" height="32"/>
                         <buttonCell key="cell" type="push" title="GitHub Project Page" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Mfa-eD-WGx">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -55,7 +56,7 @@
                         </connections>
                     </button>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" alphaValue="0.5" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u6X-th-DUS">
-                        <rect key="frame" x="13" y="16" width="164" height="11"/>
+                        <rect key="frame" x="18" y="16" width="164" height="11"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="160" id="aEk-rD-BAb"/>
                         </constraints>
