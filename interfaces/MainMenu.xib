@@ -11,6 +11,7 @@
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customObject id="Org-kV-Ccu" customClass="SUUpdater"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Menubar_Colors" customModuleProvider="target">
             <connections>
                 <outlet property="colorPanel" destination="iHg-ud-7kT" id="tub-Kt-cKC"/>
@@ -42,6 +43,12 @@
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="showAbout:" target="Voe-Tx-rLC" id="eA9-hw-r6P"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Check for Updates…" id="hph-kv-Qt7">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="checkForUpdates:" target="Org-kV-Ccu" id="EfV-rm-kVc"/>
                     </connections>
                 </menuItem>
                 <menuItem title="Quit" keyEquivalent="q" id="ge2-nI-E4N">
