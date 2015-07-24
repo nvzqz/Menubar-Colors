@@ -34,5 +34,7 @@
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
+	<key>SUFeedURL</key>
+	<string>https://nvzqz.github.io/Menubar-Colors/releases/appcast.xml</string>
 </dict>
 </plist>
