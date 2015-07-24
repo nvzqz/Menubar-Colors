@@ -60,6 +60,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         statusMenu.delegate = self
         
         colorPanel.hidesOnDeactivate = false
+        colorPanel.title = AppInfo.AppName
         
         // MARK: Populate "Reset Location" menu
         
