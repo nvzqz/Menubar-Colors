@@ -19,5 +19,18 @@
             <sparkle:minimumSystemVersion>10.10</sparkle:minimumSystemVersion>
         </item>
 
+        <item>
+            <title>Version 2.1.0</title>
+            <sparkle:releaseNotesLink>
+                https://nvzqz.github.io/Menubar-Colors/releases/notes-2.1.0.html
+            </sparkle:releaseNotesLink>
+            <pubDate>Fri, 31 Jul 2015 21:27:20 -0400</pubDate>
+            <enclosure  url="https://github.com/nvzqz/Menubar-Colors/releases/download/v2.1.0/Menubar-Colors.zip"
+                        sparkle:version="8"
+          	            sparkle:shortVersionString="2.1.0"
+                        type="application/octet-stream" />
+            <sparkle:minimumSystemVersion>10.10</sparkle:minimumSystemVersion>
+        </item>
+
     </channel>
 </rss>
