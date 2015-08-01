@@ -61,6 +61,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         colorPanel.hidesOnDeactivate = false
         colorPanel.title = AppInfo.AppName
+        colorPanel.level = Int(CGWindowLevelKey(kCGDockWindowLevelKey) * 5 / 2)
         
         // MARK: Populate "Reset Location" menu
         
