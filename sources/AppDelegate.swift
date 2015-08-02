@@ -59,10 +59,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         statusMenu.delegate = self
         
-        colorPanel.hidesOnDeactivate = false
-        colorPanel.title = AppInfo.AppName
-        colorPanel.level = Int(CGWindowLevelKey(kCGDockWindowLevelKey) * 5 / 2)
-        
         // MARK: Populate "Reset Location" menu
         
         let menu: NSMenu = statusMenu.resetPositionMenu

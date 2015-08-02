@@ -36,6 +36,12 @@ class ColorPanel: NSColorPanel {
     
     // MARK: Methods
     
+    override func awakeFromNib() {
+        self.hidesOnDeactivate = false
+        self.title = AppInfo.AppName
+        self.level = Int(CGWindowLevelKey(kCGDockWindowLevelKey) * 5 / 2)
+    }
+    
     func moveToScreenLocation(location: Location) {
         
         func newFrameOrigin() -> NSPoint? {
