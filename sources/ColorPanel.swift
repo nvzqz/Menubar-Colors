@@ -40,6 +40,7 @@ class ColorPanel: NSColorPanel {
         self.hidesOnDeactivate = false
         self.title = AppInfo.AppName
         self.level = Int(CGWindowLevelKey(kCGDockWindowLevelKey) * 5 / 2)
+        self.collectionBehavior = self.collectionBehavior | .CanJoinAllSpaces
     }
     
     func moveToScreenLocation(location: Location) {
