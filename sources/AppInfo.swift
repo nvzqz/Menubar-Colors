@@ -28,7 +28,7 @@ import Foundation
 
 struct AppInfo {
     
-    private static let BundleInfo = NSBundle.mainBundle().infoDictionary as! Dictionary<String, AnyObject>
+    private static let BundleInfo = NSBundle.mainBundle().infoDictionary!
     
     static var AppName: String {
         if let appName = BundleInfo["CFBundleName"] as? String {

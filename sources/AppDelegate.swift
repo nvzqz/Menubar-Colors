@@ -48,14 +48,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         statusItem = statusBar.statusItemWithLength(-1)
         
         let icon = NSImage(named: "menu-icon")
-        icon?.setTemplate(true)
+        icon?.template = true
         statusItem.image = icon
         
         let button = statusItem.button
         button?.toolTip = "Click to show color panel\nRight click to show menu"
         button?.target = self
         button?.action = "statusButtonPressed:"
-        button?.sendActionOn(Int((NSEventMask.LeftMouseUpMask | NSEventMask.RightMouseUpMask).rawValue))
+        button?.sendActionOn(Int(NSEventMask.LeftMouseUpMask.union(.RightMouseUpMask).rawValue))
         
         statusMenu.delegate = self
         
@@ -81,7 +81,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func statusButtonPressed(sender: NSStatusBarButton) {
         if let event = NSApplication.sharedApplication().currentEvent {
-            if (event.modifierFlags & NSEventModifierFlags.ControlKeyMask).rawValue != 0 || event.type == .RightMouseUp {
+            if event.modifierFlags.contains(.ControlKeyMask) || event.type == .RightMouseUp {
                 // Handle right mouse click
                 statusItem.menu = statusMenu
                 statusItem.popUpStatusItemMenu(statusMenu)
@@ -100,7 +100,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             Preferences.sharedPreferences.write(AppSupportHandler.SharedHandler.preferencesFile)
             
             if sender.action == "setResetLocation:" {
-                for item in sender.menu?.itemArray as! [NSMenuItem] {
+                for item in sender.menu!.itemArray {
                     if item.action == sender.action {
                         item.state = (item == sender) ? NSOnState : NSOffState
                     }

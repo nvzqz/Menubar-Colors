@@ -26,7 +26,7 @@
 
 import Foundation
 
-enum Location: Printable {
+enum Location: CustomStringConvertible {
     
     static let CasesDictionary: [String : Location] = [
         TopLeft.stringValue  : TopLeft,

@@ -34,7 +34,7 @@ class AppSupportHandler {
         NSSearchPathDirectory.ApplicationSupportDirectory,
         NSSearchPathDomainMask.AllDomainsMask,
         true
-        )[0] as! String).stringByAppendingPathComponent(AppInfo.AppName)
+        )[0]).stringByAppendingPathComponent(AppInfo.AppName)
     
     let preferencesFile: String
     

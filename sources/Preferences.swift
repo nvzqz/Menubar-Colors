@@ -87,16 +87,18 @@ class Preferences {
             if isDir {
                 return write()
             } else {
-                fileManager.removeItemAtPath(parentDir, error: nil)
+                do {
+                    try fileManager.removeItemAtPath(parentDir)
+                } catch {}
             }
         }
         
-        fileManager.createDirectoryAtPath(
-            parentDir,
-            withIntermediateDirectories: false,
-            attributes: nil,
-            error: nil
-        )
+        do {
+            try fileManager.createDirectoryAtPath(
+                parentDir,
+                withIntermediateDirectories: false,
+                attributes: nil)
+        } catch {}
         
         return write()
     }
