@@ -79,7 +79,7 @@ class Preferences {
             return dictionary.writeToFile(path, atomically: true)
         }
         
-        let parentDir = path.stringByDeletingLastPathComponent
+        let parentDir = path.NS.stringByDeletingLastPathComponent
         let fileManager = NSFileManager.defaultManager()
         var isDir: ObjCBool = false
         

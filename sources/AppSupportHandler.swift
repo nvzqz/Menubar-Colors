@@ -34,12 +34,12 @@ class AppSupportHandler {
         NSSearchPathDirectory.ApplicationSupportDirectory,
         NSSearchPathDomainMask.AllDomainsMask,
         true
-        )[0]).stringByAppendingPathComponent(AppInfo.AppName)
+        )[0]).NS.stringByAppendingPathComponent(AppInfo.AppName)
     
     let preferencesFile: String
     
     init() {
-        preferencesFile = appSupportDirectory.stringByAppendingPathComponent("Preferences.plist")
+        preferencesFile = appSupportDirectory.NS.stringByAppendingPathComponent("Preferences.plist")
     }
     
 }
