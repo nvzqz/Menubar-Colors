@@ -39,7 +39,7 @@ class ColorPanel: NSColorPanel {
     override func awakeFromNib() {
         self.hidesOnDeactivate = false
         self.title = AppInfo.AppName
-//        self.level = Int(CGWindowLevelKey(kCGDockWindowLevelKey) * 5 / 2)
+        self.level = Int(CGWindowLevelForKey(CGWindowLevelKey.DockWindowLevelKey) * 5 / 2)
         self.collectionBehavior = self.collectionBehavior.union(.CanJoinAllSpaces)
     }
     

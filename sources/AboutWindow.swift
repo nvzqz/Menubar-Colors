@@ -34,9 +34,6 @@ class AboutWindow: NSWindow {
     override func awakeFromNib() {
         
         self.collectionBehavior = self.collectionBehavior.union(.MoveToActiveSpace)
-        
-//        self.level = Int(CGWindowLevelKey((kCGModalPanelWindowLevelKey)))
-//        self.level = NSModalPanelWindowLevel
         self.level = Int(CGWindowLevelForKey(.ModalPanelWindowLevelKey))
         
         self.titlebarAppearsTransparent = true
