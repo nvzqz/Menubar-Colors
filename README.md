@@ -1,8 +1,10 @@
-# Menubar Colors
+<h1 align="center">Menubar Colors</h1>
 
-[![OS X Version](http://img.shields.io/badge/OS%20X-10.10%2B-lightgrey.svg)]()
-[![Release Version](https://img.shields.io/badge/release-v2.2.0-orange.svg)]()
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)]()
+<p align="center">
+    <img alt="OS X Version"    src="http://img.shields.io/badge/OS%20X-10.10%2B-lightgrey.svg"/>
+    <img alt="Release Version" src="https://img.shields.io/badge/release-v2.2.0-orange.svg"/>
+    <img alt="License"         src="https://img.shields.io/badge/license-MIT-blue.svg"/>
+</p>
 
 ## What is this?
 
