@@ -6,6 +6,12 @@
     <img alt="License"         src="https://img.shields.io/badge/license-MIT-blue.svg"/>
 </p>
 
+<p align="center">
+    <a href="#installation">Installation</a>
+  • <a href="#how-do-you-use-this">Usage</a>
+  • <a href="#recommended-plugins">Plugins</a>
+</p>
+
 ## What is this?
 
 This a utility that runs in the OS X menubar that allows for quick access to the
