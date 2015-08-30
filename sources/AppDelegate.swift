@@ -69,13 +69,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 action: "setResetLocation:",
                 keyEquivalent: ""
             )
-            if location == Preferences.sharedPreferences.resetLocation {
+            if location == Preferences.sharedPreferences().resetLocation {
                 item.state = NSOnState
             }
             menu.addItem(item)
         }
         
-        colorPanel.showsAlpha = Preferences.sharedPreferences.showsAlpha
+        colorPanel.showsAlpha = Preferences.sharedPreferences().showsAlpha
         if let item = statusMenu.itemWithTitle("Show Alpha") {
             item.state = colorPanel.showsAlpha ? NSOnState : NSOffState
         }
@@ -101,8 +101,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         if let location = Location.CasesDictionary[sender.title] {
             
             colorPanel.moveToScreenLocation(location)
-            Preferences.sharedPreferences.resetLocation = location
-            Preferences.sharedPreferences.write(AppSupportHandler.SharedHandler.preferencesFile)
+            Preferences.sharedPreferences().resetLocation = location
             
             if sender.action == "setResetLocation:" {
                 for item in sender.menu!.itemArray {

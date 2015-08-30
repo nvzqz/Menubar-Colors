@@ -78,7 +78,7 @@ class ColorPanel: NSColorPanel {
     // MARK: IB Methods
     
     @IBAction func open(sender: AnyObject?) {
-        let location = Preferences.sharedPreferences.resetLocation
+        let location = Preferences.sharedPreferences().resetLocation
         self.moveToScreenLocation(location)
         self.makeKeyAndOrderFront(sender)
     }
@@ -88,8 +88,7 @@ class ColorPanel: NSColorPanel {
         if let sender = sender as? NSMenuItem {
             sender.state = self.showsAlpha ? NSOnState : NSOffState
         }
-        Preferences.sharedPreferences.showsAlpha = self.showsAlpha
-        Preferences.sharedPreferences.write(AppSupportHandler.SharedHandler.preferencesFile)
+        Preferences.sharedPreferences().showsAlpha = self.showsAlpha
     }
 
 }

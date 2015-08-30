@@ -29,101 +29,46 @@ import Foundation
 //  Mark: Preferences Class
 class Preferences {
     
-    // MARK: Static Constants
-    
-    static let sharedPreferences: Preferences = Preferences(path: AppSupportHandler.SharedHandler.preferencesFile)
-    
-    
-    // MARK: Private Variables
+    // MARK: Preferences Keys
     
     private struct Keys {
         static var ResetLocation: String = "Reset Location"
         static var ShowsAlpha: String = "Shows Alpha"
     }
     
-    private var dictionary: NSMutableDictionary
+    // MARK: Shared Preferences
+    
+    private static let _sharedPreferences = Preferences()
+    
+    static func sharedPreferences() -> Preferences { return _sharedPreferences }
+    
+    // MARK: Private Variables
+    
+    private let defaults = NSUserDefaults.standardUserDefaults()
     
     // MARK: Variables
     
     var resetLocation: Location {
         get {
-            if let resetLocation: String = dictionary[Keys.ResetLocation] as? String {
+            if let resetLocation = defaults.objectForKey(Keys.ResetLocation) as? String {
                 if let location: Location = Location.CasesDictionary[resetLocation] {
                     return location
                 }
             }
             return .None
-        } set {
-            dictionary[Keys.ResetLocation] = newValue.stringValue
+        }
+        set {
+            defaults.setValue(newValue.stringValue, forKey: Keys.ResetLocation)
         }
     }
     
     var showsAlpha: Bool {
         get {
-            if let showsAlpha = dictionary[Keys.ShowsAlpha] as? Bool {
-                return showsAlpha
-            } else {
-                return false
-            }
+            return defaults.objectForKey(Keys.ShowsAlpha) as? Bool ?? false
         }
         set {
-            dictionary[Keys.ShowsAlpha] = newValue
+            defaults.setBool(newValue, forKey: Keys.ShowsAlpha)
         }
-    }
-    
-    // MARK: Initialization
-    
-    init() {
-        dictionary = NSMutableDictionary()
-        showsAlpha = false
-    }
-    
-    init(path: String) {
-        
-        if let dictionary = NSMutableDictionary(contentsOfFile: path) {
-            self.dictionary = dictionary
-        } else {
-            self.dictionary = NSMutableDictionary()
-        }
-        
-        if let showsAlpha = dictionary[Keys.ShowsAlpha] as? Bool {
-            self.showsAlpha = showsAlpha
-        } else {
-            self.showsAlpha = false
-        }
-        
-    }
-    
-    // MARK: Methods
-    
-    func write(path: String) -> Bool {
-        
-        func write() -> Bool {
-            return dictionary.writeToFile(path, atomically: true)
-        }
-        
-        let parentDir = path.NS.stringByDeletingLastPathComponent
-        let fileManager = NSFileManager.defaultManager()
-        var isDir: ObjCBool = false
-        
-        if fileManager.fileExistsAtPath(parentDir, isDirectory: &isDir) {
-            if isDir {
-                return write()
-            } else {
-                do {
-                    try fileManager.removeItemAtPath(parentDir)
-                } catch {}
-            }
-        }
-        
-        do {
-            try fileManager.createDirectoryAtPath(
-                parentDir,
-                withIntermediateDirectories: false,
-                attributes: nil)
-        } catch {}
-        
-        return write()
     }
     
 }
