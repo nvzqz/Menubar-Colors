@@ -31,7 +31,7 @@
                         type="application/octet-stream" />
             <sparkle:minimumSystemVersion>10.10</sparkle:minimumSystemVersion>
         </item>
-        
+
         <item>
             <title>Version 2.2.0</title>
             <sparkle:releaseNotesLink>
@@ -41,6 +41,19 @@
             <enclosure  url="https://github.com/nvzqz/Menubar-Colors/releases/download/v2.2.0/Menubar-Colors.zip"
                         sparkle:version="9"
           	            sparkle:shortVersionString="2.2.0"
+                        type="application/octet-stream" />
+            <sparkle:minimumSystemVersion>10.10</sparkle:minimumSystemVersion>
+        </item>
+
+        <item>
+            <title>Version 2.3.0</title>
+            <sparkle:releaseNotesLink>
+                https://nvzqz.github.io/Menubar-Colors/releases/notes-2.3.0.html
+            </sparkle:releaseNotesLink>
+            <pubDate>Sun, 30 Aug 2015 13:36:29 -0400</pubDate>
+            <enclosure  url="https://github.com/nvzqz/Menubar-Colors/releases/download/v2.3.0/Menubar-Colors.zip"
+                        sparkle:version="10"
+          	            sparkle:shortVersionString="2.3.0"
                         type="application/octet-stream" />
             <sparkle:minimumSystemVersion>10.10</sparkle:minimumSystemVersion>
         </item>
