@@ -82,5 +82,12 @@ class ColorPanel: NSColorPanel {
         self.moveToScreenLocation(location)
         self.makeKeyAndOrderFront(sender)
     }
+    
+    @IBAction func toggleAlpha(sender: AnyObject?) {
+        self.showsAlpha = !self.showsAlpha
+        if let sender = sender as? NSMenuItem {
+            sender.state = self.showsAlpha ? NSOnState : NSOffState
+        }
+    }
 
 }
