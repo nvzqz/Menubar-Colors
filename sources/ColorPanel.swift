@@ -88,6 +88,8 @@ class ColorPanel: NSColorPanel {
         if let sender = sender as? NSMenuItem {
             sender.state = self.showsAlpha ? NSOnState : NSOffState
         }
+        Preferences.sharedPreferences.showsAlpha = self.showsAlpha
+        Preferences.sharedPreferences.write(AppSupportHandler.SharedHandler.preferencesFile)
     }
 
 }

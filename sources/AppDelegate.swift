@@ -75,6 +75,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             menu.addItem(item)
         }
         
+        colorPanel.showsAlpha = Preferences.sharedPreferences.showsAlpha
+        if let item = statusMenu.itemWithTitle("Show Alpha") {
+            item.state = colorPanel.showsAlpha ? NSOnState : NSOffState
+        }
+        
     }
     
     // MARK: Selector Methods

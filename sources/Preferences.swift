@@ -38,6 +38,7 @@ class Preferences {
     
     private struct Keys {
         static var ResetLocation: String = "Reset Location"
+        static var ShowsAlpha: String = "Shows Alpha"
     }
     
     private var dictionary: NSMutableDictionary
@@ -57,18 +58,40 @@ class Preferences {
         }
     }
     
+    var showsAlpha: Bool {
+        get {
+            if let showsAlpha = dictionary[Keys.ShowsAlpha] as? Bool {
+                return showsAlpha
+            } else {
+                return false
+            }
+        }
+        set {
+            dictionary[Keys.ShowsAlpha] = newValue
+        }
+    }
+    
     // MARK: Initialization
     
     init() {
         dictionary = NSMutableDictionary()
+        showsAlpha = false
     }
     
     init(path: String) {
+        
         if let dictionary = NSMutableDictionary(contentsOfFile: path) {
             self.dictionary = dictionary
         } else {
             self.dictionary = NSMutableDictionary()
         }
+        
+        if let showsAlpha = dictionary[Keys.ShowsAlpha] as? Bool {
+            self.showsAlpha = showsAlpha
+        } else {
+            self.showsAlpha = false
+        }
+        
     }
     
     // MARK: Methods
