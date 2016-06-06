@@ -54,7 +54,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let button = statusItem.button
         button?.toolTip = "Click to show color panel\nRight click to show menu"
         button?.target = self
-        button?.action = "statusButtonPressed:"
+        button?.action = #selector(AppDelegate.statusButtonPressed(_:))
         button?.sendActionOn(Int(NSEventMask.LeftMouseUpMask.union(.RightMouseUpMask).rawValue))
         
         statusMenu.delegate = self
@@ -66,7 +66,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         for location in Location.CasesArray {
             let item = NSMenuItem(
                 title: location.description,
-                action: "setResetLocation:",
+                action: #selector(AppDelegate.setResetLocation(_:)),
                 keyEquivalent: ""
             )
             if location == Preferences.sharedPreferences().resetLocation {
@@ -103,7 +103,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             colorPanel.moveToScreenLocation(location)
             Preferences.sharedPreferences().resetLocation = location
             
-            if sender.action == "setResetLocation:" {
+            if sender.action == #selector(AppDelegate.setResetLocation(_:)) {
                 for item in sender.menu!.itemArray {
                     if item.action == sender.action {
                         item.state = (item == sender) ? NSOnState : NSOffState
