@@ -27,7 +27,7 @@ system-wide color panel.
 
 ### Cask
 
-`brew cask install menubar-colors`
+`brew install menubar-colors --cask`
 
 ## How do you use this?
 
@@ -46,19 +46,19 @@ because of how extensible it is.
 
 [Download](http://bjango.com/mac/skalacolor/)
 
-Cask: `brew cask install colorpicker-skalacolor`
+Cask: `brew install colorpicker-skalacolor --cask`
 
 ### Antetype Color Picker
 
 [Download](http://www.antetype.com/blog/2014/03/updated-antetype-color-picker-1-4-1/)
 
-Cask: `brew cask install colorpicker-antetype`
+Cask: `brew install colorpicker-antetype --cask`
 
 ### Developer Color Picker
 
 [Download](http://download.panic.com/picker/)
 
-Cask: `brew cask install colorpicker-developer`
+Cask: `brew install colorpicker-developer --cask`
 
 ## License
 
